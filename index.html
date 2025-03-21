@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Portfólio EXPERSITE</title>
+</head>
+<body>
+  <header class="container_cabeçalho">
+    <h1 class="titulo">ihbrazil Full Stack</h1>
+    <div class="nav-menu">
+      <a href="#">Home</a>
+      <a href="#">Portfólio</a>
+      <a href="#">Fale Conosco</a>
+    </div>
+  </header>
+
+  <section class="main-section">
+    <div>
+      <h1>Desenvolvemos<br> o seu site</h1>
+      <p>Há mais de 15 anos, transformamos ideias em<br> presença digital sólida e eficaz.</p>
+    </div>
+    <div class="portfolio-image">
+      <img src="./imagens/agencia-de-tecnologia.png" alt="Imagem do portfólio">
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-buttons">
+      <button
+          onclick="document.getElementById('project-form').style.display='block'">
+          Inicie seu projeto
+      </button>
+      <button id="whatsapp-btn" onclick="window.open('https://api.whatsapp.com/send?phone=+5532991538912&text=Olá, gostaria de saber mais sobre os serviços oferecidos pela ihbrazil Agência Full Stack.', '_blank')">
+        Fale pelo nosso WhatsApp
+      </button>      
+    </div>
+  </section>
+
+  <section>
+    <!-- Formulário interativo -->
+    <div id="project-form" class="form-container">
+      <h2>Conte-nos sobre seu projeto</h2>
+      <form action="/submit" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="project-type">Tipo de projeto:</label>
+        <select id="project-type" name="project-type" required>
+          <option value="site">Site Institucional</option>
+          <option value="ecommerce">E-commerce</option>
+          <option value="web-app">Aplicação Web</option>
+        </select>
+        
+        <label for="details">Detalhes adicionais:</label>
+        <textarea id="details" name="details" rows="4" placeholder="Exemplo: funcionalidade desejada, estilo visual..."></textarea>
+        <div class="cta-buttons">
+          <button type="submit">Enviar</button>
+          <button type="button" onclick="document.getElementById('project-form').style.display='none'">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.</p>
+  </footer>
+</body>
+</html>

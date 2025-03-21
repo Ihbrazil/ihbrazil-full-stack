@@ -46,66 +46,69 @@ body {
 
 /* Estilo para a seção principal */
 .main-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  justify-content: space-between; /* Espaço entre os elementos */
-  text-align: left; /* Alinha o texto à esquerda */
-  gap: 20px; /* Espaço entre os elementos */
-
+  display: flex; /* Torna o layout flexível */
+  flex-direction: row; /* Coloca os elementos lado a lado */
+  justify-content: flex-end; /* Alinha todos os elementos à direita */
+  align-items: center; /* Alinha verticalmente ao centro */
+  text-align: right; /* Texto alinhado à direita */
   padding: 40px 20px;
   background-color: #ffffff;
   border-radius: 10px; /* Cantos arredondados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
   margin: 20px;
+
+  
+  
+  gap: 10%; /* Espaço entre os elementos */
+
+  
 }
 
-.main-section h1 {
+.portfolio-text {
+  flex: 1; /* Define a proporção da área do texto */
+  max-width: 60%; /* Limita a largura máxima do texto */
+}
+
+.portfolio-text h1 {
   font-size: 36px;
   color: #1b3675;
-  
   margin-bottom: 20px;
   text-transform: uppercase; /* Texto em maiúsculas */
 }
 
-.main-section p {
+.portfolio-text p {
   font-size: 18px;
   color: #454545;
-  
   line-height: 1.6; /* Melhor espaçamento entre linhas */
-}
-
-.main-section h1, 
-.main-section p {
-  flex: 1; /* Faz com que o texto ocupe espaço igual à imagem */
 }
 
 /* Estilo para a imagem */
 .portfolio-image {
-  flex: 1; /* Faz com que a imagem ocupe espaço igual ao texto */
+  flex: 1; /* Define a proporção da imagem */
+  max-width: 40%; /* Limita a largura máxima da imagem */
   display: flex;
-  justify-content: flex-end; /* Garante que a imagem fique alinhada à direita */
+  justify-content: flex-end; /* Garante que a imagem fique no final */
 }
 
 .portfolio-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor da imagem */
-  transition: transform 0.3s ease; /* Animação de escala */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  transition: transform 0.3s ease; /* Animação suave */
 }
 
 .portfolio-image img:hover {
-  transform: scale(1.05); /* Efeito de zoom */
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 /* Botões de chamada para ação */
 .cta-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  display: flex; /* Define o layout flexível */
+  flex-direction: row; /* Alinha os botões em uma linha */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  align-items: center; /* Centraliza os botões verticalmente */
+  gap: 15px; /* Espaço entre os botões */
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -187,22 +190,155 @@ footer {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Media queries */
-@media (min-width: 768px) {
+/* Configuração para celulares (telas pequenas) */
+@media only screen and (max-width: 600px) {
+  .container_cabeçalho {
+    flex-direction: column; /* Elementos empilhados */
+    text-align: center;
+    padding: 10px; /* Menos espaço interno */
+  }
+
+  .titulo {
+    font-size: 24px; /* Texto menor em telas pequenas */
+  }
+
+  .nav-menu {
+    flex-direction: column; /* Links empilhados */
+    gap: 10px; /* Espaço menor entre os links */
+  }
+
   .main-section {
-    flex-direction: row;
-    text-align: left;
-    justify-content: space-between;
-    padding: 40px;
+    flex-direction: column; /* Texto e imagem empilhados */
+    text-align: center; /* Centraliza os textos */
+    padding: 20px 10px; /* Ajusta o espaçamento interno */
+  }
+
+  .portfolio-text {
+    max-width: 100%; /* Texto ocupa a largura total */
+  }
+
+  .portfolio-text h1 {
+    font-size: 28px; /* Fonte menor para títulos */
+  }
+
+  .portfolio-text p {
+    font-size: 16px; /* Fonte menor para parágrafos */
   }
 
   .portfolio-image {
-    flex: 1;
-    margin-left: 20px;
+    max-width: 100%; /* Imagem ocupa a largura total */
+    margin: 10px auto; /* Centraliza a imagem */
   }
 
   .cta-buttons {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column; /* Empilha os botões */
+    gap: 10px; /* Reduz o espaço entre os botões */
   }
+
+  .cta-buttons button {
+    width: auto; /* Botões largura automática */
+    font-size: 16px; /* Fonte um pouco menor */
+    padding: 10px; /* Ajuste do padding */
+  }
+}
+
+/* Configuração para tablets (telas médias) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .container_cabeçalho {
+    flex-direction: row; /* Elementos lado a lado */
+    justify-content: space-between; /* Espaçamento horizontal */
+    padding: 15px 20px;
+  }
+
+  .titulo {
+    font-size: 28px; /* Ajusta tamanho do título */
+  }
+
+  .nav-menu {
+    flex-direction: row; /* Links lado a lado */
+    gap: 15px; /* Espaço moderado entre links */
+  }
+
+  .main-section {
+    flex-direction: row; /* Texto e imagem lado a lado */
+    justify-content: space-around; /* Distribui os elementos */
+    padding: 30px 15px; /* Ajusta o espaçamento interno */
+  }
+
+  .portfolio-text {
+    max-width: 50%; /* Limita o espaço do texto */
+  }
+
+  .portfolio-text h1 {
+    font-size: 32px; /* Tamanho maior para títulos */
+  }
+
+  .portfolio-text p {
+    font-size: 18px; /* Ajusta tamanho do parágrafo */
+  }
+
+  .portfolio-image {
+    max-width: 45%; /* Ajusta tamanho da imagem */
+    margin-left: 10px; /* Espaço à esquerda */
+  }
+
+  .cta-buttons {
+      flex-direction: row; /* Botões lado a lado */
+      justify-content: center; /* Centraliza os botões */
+      gap: 15px; /* Espaço moderado entre os botões */
+  }
+  
+  .cta-buttons button {
+      font-size: 16px; /* Fonte ajustada */
+      padding: 12px 25px; /* Reduz o padding */
+  }
+}
+
+/* Configuração para desktops (telas grandes) */
+@media only screen and (min-width: 1025px) {
+  .container_cabeçalho {
+    padding: 20px 40px; /* Espaçamento amplo para desktops */
+  }
+
+  .titulo {
+    font-size: 32px; /* Tamanho maior para títulos */
+  }
+
+  .nav-menu {
+    gap: 20px; /* Espaçamento amplo entre links */
+  }
+
+  .main-section {
+    flex-direction: row; /* Texto e imagem lado a lado */
+    justify-content: space-between; /* Espaçamento equilibrado */
+    padding: 40px 20px;
+  }
+
+  .portfolio-text {
+    max-width: 60%; /* Texto ocupa mais espaço */
+  }
+
+  .portfolio-text h1 {
+    font-size: 36px; /* Texto impactante */
+  }
+
+  .portfolio-text p {
+    font-size: 18px; /* Tamanho consistente para parágrafos */
+  }
+
+  .portfolio-image {
+    max-width: 40%; /* Ajusta tamanho da imagem */
+    margin-left: 20px; /* Espaçamento à esquerda */
+  }
+
+  .cta-buttons {
+      flex-direction: row; /* Botões lado a lado */
+      justify-content: center; /* Centraliza os botões */
+      gap: 20px; /* Espaçamento maior entre os botões */
+  }
+  
+  .cta-buttons button {
+      font-size: 18px; /* Tamanho padrão */
+      padding: 12px 30px; /* Padding original */
+  }  
 }

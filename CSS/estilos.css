@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
@@ -56,12 +56,7 @@ body {
   border-radius: 10px; /* Cantos arredondados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
   margin: 20px;
-
-  
-  
   gap: 10%; /* Espaço entre os elementos */
-
-  
 }
 
 .portfolio-text {
@@ -122,7 +117,7 @@ body {
   color: #1b3675;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out; /* Transição suave */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 

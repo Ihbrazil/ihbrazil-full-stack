@@ -7,7 +7,7 @@ body {
 }
 
 /* Estilo para o cabeçalho */
-.container_cabeçalho {
+.container_cabecalho {
   background: linear-gradient(to right, #1b3675, #27488b); /* Gradiente no cabeçalho */
   color: #fff;
   padding: 20px 40px;
@@ -192,7 +192,7 @@ footer {
 
 /* Configuração para celulares (telas pequenas) */
 @media only screen and (max-width: 600px) {
-  .container_cabeçalho {
+  .container_cabecalho {
     flex-direction: column; /* Elementos empilhados */
     text-align: center;
     padding: 10px; /* Menos espaço interno */
@@ -244,7 +244,7 @@ footer {
 
 /* Configuração para tablets (telas médias) */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .container_cabeçalho {
+  .container_cabecalho {
     flex-direction: row; /* Elementos lado a lado */
     justify-content: space-between; /* Espaçamento horizontal */
     padding: 15px 20px;
@@ -296,7 +296,7 @@ footer {
 
 /* Configuração para desktops (telas grandes) */
 @media only screen and (min-width: 1025px) {
-  .container_cabeçalho {
+  .container_cabecalho {
     padding: 20px 40px; /* Espaçamento amplo para desktops */
   }
 

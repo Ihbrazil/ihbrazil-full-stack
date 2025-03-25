@@ -1,0 +1,51 @@
+  
+</head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    <link rel="stylesheet" href="./CSS/estilo-contato.css">
+    <title>Portfólio ihbrazil Full Stack</title>
+</head>
+<body>
+    <header class="container_cabecalho">
+        <h1 class="titulo">ihbrazil Full Stack</h1>
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html">Fale Conosco</a>
+        </div>
+    </header>
+
+    <section class="main-section">
+        <div class="portfolio-text examples-portfolio">
+          <h1>Fale Conosco</h1>
+          <p>Entre em contato com a nossa equipe. Teremos o maior prazer em ajudar!</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <form action="envio.php" method="post" class="contact-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Seu email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            <div class="cta-buttons">
+                <button type="submit">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.</p>
+    </footer>
+</body>
+</html>

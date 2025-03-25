@@ -1,0 +1,176 @@
+/* Estilos para a seção de portfólio */
+.examples-portfolio {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+.container {
+    background-position: center center;
+    background-size: cover;
+}
+
+.layout_padding {
+    padding-top: 90px;
+    padding-bottom: 30px; /* Ajuste sutil */
+}
+
+.portfolio_section {
+    width: 100%;
+    padding: 0 40px; /* Espaçamento lateral (esquerda e direita) */
+    box-sizing: border-box; /* Para incluir o padding dentro do container */
+}
+  
+  .portfolio_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #f5c729;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .portfolio_taital_1 {
+    color: #292929;
+    border-bottom: 5px solid #363636;
+  }
+  
+  .portfolio_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 30px;
+  }
+
+  .portfolio_section_2 .row {
+    display: flex;
+    flex-wrap: wrap; /* Para responsividade */
+    justify-content: space-between; /* Ajusta o espaçamento */
+}
+  
+.image {
+    width: 100%; /* Garante que as imagens ocupem toda a largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease; /* Suaviza a transição */
+    background-color: rgba(45, 45, 45, 0.5); /* Fundo escuro com opacidade */
+}
+  
+  .container_main {
+    flex: 1 1 calc(50% - 40px); /* 2 imagens por linha, com margem lateral */
+    margin: 10px 0; /* Margem vertical entre as linhas */
+    box-sizing: border-box; /* Considera padding/bordas no cálculo */
+    position: relative; /* Garante que o overlay fique sobre a imagem */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
+}
+  
+.container_main:hover .overlay {
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    width: 80%;
+    text-align: center;
+}
+  
+  .btn_main {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .buy_bt {
+    width: 160px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .buy_bt a {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fdb203;
+    color: #1b3675;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Transição suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+  
+.buy_bt a:hover {
+    background-color: #1b3675;
+    color: #fff;
+    transform: translateY(-2px); /* Efeito de leve subida */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+  
+  .seemore_bt {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex; /* Define o layout flexível */
+    flex-direction: row; /* Alinha os botões em uma linha */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+    gap: 15px; /* Espaço entre os botões */
+    margin-bottom: 20px;
+  }
+  
+  .seemore_bt a {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fdb203;
+    color: #1b3675;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Transição suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+  
+  .seemore_bt a:hover {
+    background-color: #1b3675;
+    color: #fff;
+    transform: translateY(-2px); /* Efeito de leve subida */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+  
+/* Estilos para  responsividade*/
+
+@media (max-width: 480px) {
+    .container_main {
+        max-width: 100%; /* 1 item por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .container_main {
+        flex: 1 1 calc(100% - 20px); /* Imagens ocupam toda a largura em telas pequenas */
+    }
+
+    .seemore_bt {
+        width: 100%; /* Melhor adaptação */
+    }
+}

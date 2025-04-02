@@ -129,7 +129,7 @@ body {
 }
 
  /* Estilo para o formulário */
- .form-container {
+ .container-formulario {
   display: none; /* Inicialmente escondido */
   background-color: #fff;
   border-radius: 10px;
@@ -138,7 +138,7 @@ body {
   margin: 20px;
 }
 
-.form-container h2 {
+.container-formulario h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }

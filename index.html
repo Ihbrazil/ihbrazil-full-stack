@@ -30,7 +30,7 @@
   <section>
     <div class="cta-buttons">
       <button
-          onclick="document.getElementById('project-form').style.display='block'">
+          onclick="document.getElementById('formulario-de-projeto').style.display='block'">
           Inicie seu projeto
       </button>
       <button id="whatsapp-btn" onclick="window.open('https://api.whatsapp.com/send?phone=+5532991538912&text=Olá, gostaria de saber mais sobre os serviços oferecidos pela ihbrazil Agência Full Stack.', '_blank')">
@@ -41,27 +41,28 @@
 
   <section>
     <!-- Formulário interativo -->
-    <div id="project-form" class="form-container">
+    <div id="formulario-de-projeto" class="container-formulario">
       <h2>Conte-nos sobre seu projeto</h2>
+      <form action="mailto:ihbrazil@gmail.com" method="post" enctype="text/plain">
       <form action="/submit" method="post">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="name" required>
         
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
         
         <label for="project-type">Tipo de projeto:</label>
-        <select id="project-type" name="project-type" required>
+        <select id="tipo-de-projeto" name="project-type" required>
           <option value="site">Site Institucional</option>
           <option value="ecommerce">E-commerce</option>
           <option value="web-app">Aplicação Web</option>
         </select>
         
-        <label for="details">Detalhes adicionais:</label>
-        <textarea id="details" name="details" rows="4" placeholder="Exemplo: funcionalidade desejada, estilo visual..."></textarea>
+        <label for="detalhes">Detalhes adicionais:</label>
+        <textarea id="detalhes" name="details" rows="4" placeholder="Exemplo: funcionalidade desejada, estilo visual..."></textarea>
         <div class="cta-buttons">
           <button type="submit">Enviar</button>
-          <button type="button" onclick="document.getElementById('project-form').style.display='none'">Cancelar</button>
+          <button type="button" onclick="document.getElementById('formulario-de-projeto').style.display='none'">Cancelar</button>
         </div>
       </form>
     </div>

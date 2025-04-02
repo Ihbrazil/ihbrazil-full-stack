@@ -1,176 +1,193 @@
-/* Estilos para a seção de portfólio */
-.examples-portfolio {
+/* Definição de variáveis para facilitar mudanças */
+:root {
+    --primary-color: #fdb203;
+    --secondary-color: #1b3675;
+    --font-color-light: #ffffff;
+    --overlay-color: rgba(45, 45, 45, 0.5);
+  }
+  
+  /* Estilos globais */
+  .examples-portfolio {
     text-align: center;
-}
-
-.row {
+    max-width: 100%; /* Largura máxima do texto */
+  }
+  
+  .linha-de-imagem {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px;
-}
-
-.container {
-    background-position: center center;
+    padding: 0;
+  }
+  
+  .container {
+    background-position: center;
     background-size: cover;
-}
-
-.layout_padding {
-    padding-top: 90px;
-    padding-bottom: 30px; /* Ajuste sutil */
-}
-
-.portfolio_section {
-    width: 100%;
-    padding: 0 40px; /* Espaçamento lateral (esquerda e direita) */
-    box-sizing: border-box; /* Para incluir o padding dentro do container */
-}
-  
-  .portfolio_taital {
-    width: 100%;
-    float: left;
-    font-size: 40px;
-    color: #f5c729;
-    font-weight: bold;
-    text-align: center;
+    padding: 20px; /* Espaçamento geral */
   }
   
-  .portfolio_taital_1 {
-    color: #292929;
-    border-bottom: 5px solid #363636;
-  }
-  
-  .portfolio_section_2 {
+  /* Seção de portfólio */
+  .portfolio_section {
     width: 100%;
-    float: left;
-    padding-top: 30px;
+    padding: 0 40px;
+    box-sizing: border-box;
   }
+  
+  /* Elementos principais do portfólio */
+  .container_imagem {
+    flex: 1 1 calc(33% - 20px); /* Ajuste flexível para 3 imagens por linha */
+    margin: 10px;
 
-  .portfolio_section_2 .row {
-    display: flex;
-    flex-wrap: wrap; /* Para responsividade */
-    justify-content: space-between; /* Ajusta o espaçamento */
-}
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative; /* Necessário para o posicionamento absoluto para posionar os botões no centro de cada imagem*/
+  }
   
-.image {
-    width: 100%; /* Garante que as imagens ocupem toda a largura disponível */
-    height: auto; /* Mantém a proporção da imagem */
-}
+  .container_imagem img {
+    width: 100%;
+    height: auto;
+  }
   
+  /* Efeito de overlay */
   .overlay {
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
+    width: 100%;
     height: 100%;
-    width: 100%;
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.5s ease; /* Suaviza a transição */
-    background-color: rgba(45, 45, 45, 0.5); /* Fundo escuro com opacidade */
-}
+    background-color: var(--overlay-color);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
   
-  .container_main {
-    flex: 1 1 calc(50% - 40px); /* 2 imagens por linha, com margem lateral */
-    margin: 10px 0; /* Margem vertical entre as linhas */
-    box-sizing: border-box; /* Considera padding/bordas no cálculo */
-    position: relative; /* Garante que o overlay fique sobre a imagem */
-    overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
-}
+  .container_imagem:hover .overlay {
+    opacity: 1;
+  }
   
-.container_main:hover .overlay {
-    opacity: 1; /* Torna visível ao passar o mouse */
-}
-  
-.text {
-    color: white;
-    font-size: 20px;
+  /* Botões */
+  .botao_imagem {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o texto */
-    width: 80%;
-    text-align: center;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Garante o alinhamento exato ao centro */
+    z-index: 2; /* Assegura que o botão esteja visível sobre a imagem */
 }
-  
-  .btn_main {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .buy_bt {
-    width: 160px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .buy_bt a {
-    padding: 12px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: #fdb203;
-    color: #1b3675;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Transição suave */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
-    text-decoration: none; /* Remove sublinhado do link */
-}
-  
-.buy_bt a:hover {
-    background-color: #1b3675;
-    color: #fff;
-    transform: translateY(-2px); /* Efeito de leve subida */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
-}
-  
-  .seemore_bt {
-    width: 170px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex; /* Define o layout flexível */
-    flex-direction: row; /* Alinha os botões em uma linha */
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    align-items: center; /* Centraliza os botões verticalmente */
-    gap: 15px; /* Espaço entre os botões */
-    margin-bottom: 20px;
-  }
-  
-  .seemore_bt a {
-    padding: 12px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: #fdb203;
-    color: #1b3675;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Transição suave */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
-    text-decoration: none; /* Remove sublinhado do link */
-}
-  
-  .seemore_bt a:hover {
-    background-color: #1b3675;
-    color: #fff;
-    transform: translateY(-2px); /* Efeito de leve subida */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
-}
-  
-/* Estilos para  responsividade*/
 
+  .botao_imagem a {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .botao {
+    text-align: center; /* Centraliza o botão horizontalmente */
+    margin-top: 20px; /* Adiciona espaçamento entre as imagens e o botão */
+}
+
+  .botao a {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .botao_imagem a:hover,
+  .botao a:hover {
+    background-color: var(--secondary-color);
+    color: var(--font-color-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+/* Responsividade */
+/* Para dispositivos extra pequenos (320px) */
+@media (max-width: 320px) {
+  .container_imagem {
+    flex: 1 1 100%; /* Cada imagem ocupa 100% da largura */
+  }
+
+  .portfolio_section {
+    padding: 0 5px; /* Reduz ainda mais as margens laterais */
+  }
+
+  .botao_imagem a {
+    font-size: 12px; /* Ajusta o tamanho da fonte dos botões */
+    padding: 6px 12px; /* Torna os botões mais compactos */
+  }
+}
+
+/* Para dispositivos pequenos (480px) */
 @media (max-width: 480px) {
-    .container_main {
-        max-width: 100%; /* 1 item por linha */
-    }
+  .container_imagem {
+    flex: 1 1 100%; /* Cada imagem ocupa 100% da largura */
+  }
+
+  .portfolio_section {
+    padding: 0 10px; /* Reduz ainda mais as margens laterais */
+  }
+
+  .botao_imagem a {
+    font-size: 10px; /* Ajusta o tamanho da fonte dos botões */
+    padding: 4px 14px; /* Torna os botões mais compactos */
+  }
 }
 
+/* Para tablets e dispositivos médios (768px) */
 @media (max-width: 768px) {
-    .container_main {
-        flex: 1 1 calc(100% - 20px); /* Imagens ocupam toda a largura em telas pequenas */
-    }
+  .container_imagem {
+    flex: 1 1 calc(50% - 20px); /* Ajusta para 2 imagens por linha */
+  }
 
-    .seemore_bt {
-        width: 100%; /* Melhor adaptação */
-    }
+  .portfolio_section {
+    padding: 0 20px; /* Reduz as margens laterais */
+  }
+
+  .botao_imagem a {
+    font-size: 12px; /* Reduz o tamanho da fonte dos botões */
+    padding: 6px 16px; /* Ajusta o espaçamento interno */
+  }
+}
+
+/* Responsividade entre 768px e 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container_imagem {
+    flex: 1 1 calc(33% - 20px); /* Mantém 3 imagens por linha */
+  }
+
+  .portfolio_section {
+    padding: 0 30px; /* Ajusta o espaçamento para telas maiores */
+  }
+
+  .botao_imagem a {
+    font-size: 12px; /* Tamanho médio para botões */
+    padding: 6px 16px; /* Mantém o espaçamento interno confortável */
+  }
+}
+
+
+/* Para dispositivos grandes (1024px ou mais) */
+@media (min-width: 1024px) {
+  .container_imagem {
+    flex: 1 1 calc(25% - 20px); /* Ajuste para 4 imagens por linha */
+  }
+
+  .portfolio_section {
+    padding: 0 60px; /* Aumenta o espaçamento para utilizar melhor o espaço */
+  }
+
+  .botao_imagem a {
+    font-size: 20px; /* Aumenta o tamanho da fonte dos botões */
+    padding: 14px 36px; /* Adiciona espaçamento interno para telas maiores */
+  }
 }

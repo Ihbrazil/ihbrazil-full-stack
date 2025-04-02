@@ -7,7 +7,12 @@ body {
     color: #333;
 }
 
-.contact-section {
+.contato-cabecalho {
+    text-align: center;
+    max-width: 100%; /* Largura máxima do texto */
+}
+
+.secao-contato {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -17,24 +22,24 @@ body {
     text-align: center;
 }
 
-.contact-section h1 {
+.secao-contato h1 {
     color: #1b3675;
     margin-bottom: 20px;
 }
 
-.contact-section p {
+.secao-contato p {
     margin-bottom: 30px;
     color: #666;
 }
 
-.contact-form label {
+.formulario-contato label {
     display: block;
     text-align: left;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.contact-form input, .contact-form textarea {
+.formulario-contato input, .formulario-contato textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -43,7 +48,7 @@ body {
     box-sizing: border-box;
 }
 
-.contact-form .submit-button {
+.formulario-contato .submit-button {
     padding: 12px 30px;
     background-color: #1b3675;
     color: #fff;
@@ -55,7 +60,7 @@ body {
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
-.contact-form .submit-button:hover {
+.formulario-contato .submit-button:hover {
     background-color: #fdb203;
     transform: scale(1.05);
 }

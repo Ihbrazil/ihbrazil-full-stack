@@ -1,5 +1,3 @@
-  
-</head>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,42 +8,109 @@
     <title>Portfólio ihbrazil Full Stack</title>
 </head>
 <body>
+
+    <!-- Cabeçalho padrão -->
     <header class="container_cabecalho">
         <h1 class="titulo">ihbrazil Full Stack</h1>
-        <div class="nav-menu">
+        <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="portfolio.html">Portfólio</a>
+            <a href="skills.html">Skills</a>
+            <a href="blog.html">Blog</a>
             <a href="contato.html">Fale Conosco</a>
-        </div>
+        </nav>
     </header>
 
+    <!-- Seção de introdução -->
     <section class="main-section">
         <div class="portfolio-text contato-cabecalho">
-          <h1>Fale Conosco</h1>
-          <p>Entre em contato com a nossa equipe. Teremos o maior prazer em ajudar!</p>
+            <h1>Fale Conosco</h1>
+            <p>Entre em contato com a nossa equipe. Teremos o maior prazer em ajudar!</p>
         </div>
     </section>
 
-    <section class="secao-contato">
-        <form action="mailto:ihbrazil@gmail.com" method="post" enctype="text/plain" class="formulario-contato">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Seu email" required>
-            
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
-            <div class="cta-buttons">
-                <button type="submit">
-                    Enviar
-                </button>
+    <!-- Carrossel de depoimentos -->
+    <section class="depoimentos-section">
+        <h2>O que dizem sobre nós</h2>
+        <div class="depoimentos-carousel">
+            <div class="depoimento">
+                <img src="./imagens/img-1.1.png" alt="Cliente A">
+                <p>"Ótima experiência! Profissionais super qualificados."</p>
+                <span>- Cliente A</span>
             </div>
-        </form>
+            <div class="depoimento">
+                <img src="./imagens/img-2.1.png" alt="Cliente B">
+                <p>"Nos ajudaram a transformar nossa ideia em um site incrível!"</p>
+                <span>- Cliente B</span>
+            </div>
+            <div class="depoimento">
+                <img src="./imagens/img-3.1.png" alt="Cliente C">
+                <p>"Recomendo fortemente! Atendimento e qualidade impecáveis."</p>
+                <span>- Cliente C</span>
+            </div>
+        </div>
     </section>
 
+    <!-- Botões de ação -->
+    <section class="cta-section">
+        <div class="cta-buttons">
+            <button onclick="document.getElementById('formulario-de-projeto').style.display='block'">
+                Inicie seu projeto
+            </button>
+            <button id="whatsapp-btn" onclick="window.open('https://api.whatsapp.com/send?phone=+5532991538912&text=Olá, gostaria de saber mais sobre os serviços oferecidos pela ihbrazil Agência Full Stack.', '_blank')">
+                Fale pelo nosso WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Formulário interativo -->
+    <section>
+        <div id="formulario-de-projeto" class="container-formulario">
+            <h2>Conte-nos sobre seu projeto</h2>
+            <form action="mailto:ihbrazil@gmail.com" method="post" enctype="text/plain">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="tipo-de-projeto">Tipo de projeto:</label>
+                <select id="tipo-de-projeto" name="project-type" required>
+                    <option value="site">Site Institucional</option>
+                    <option value="ecommerce">E-commerce</option>
+                    <option value="web-app">Aplicação Web</option>
+                </select>
+
+                <label for="detalhes">Detalhes adicionais:</label>
+                <textarea id="detalhes" name="details" rows="4" placeholder="Exemplo: funcionalidades desejadas, estilo visual..."></textarea>
+
+                <div class="cta-buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="button" onclick="document.getElementById('formulario-de-projeto').style.display='none'">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
     <footer class="footer">
         <p>© 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.</p>
     </footer>
+
+    <!-- JavaScript para Carrossel de Depoimentos -->
+    <script>
+        const depoimentos = document.querySelectorAll('.depoimento');
+        let index = 0;
+
+        function trocarDepoimento() {
+            depoimentos.forEach((depoimento, i) => {
+                depoimento.style.display = i === index ? 'block' : 'none';
+            });
+            index = (index + 1) % depoimentos.length;
+        }
+
+        setInterval(trocarDepoimento, 4000); // Alterna os depoimentos a cada 4 segundos
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | ihbrazil Full Stack</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --secondary: #22223b;
+            --background: #f8f9fa;
+            --text: #22223b;
+            --accent: #fbbf24;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 32px 0 24px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 8px;
+            color: #e3e3e3;
+        }
+        nav {
+            background: var(--secondary);
+            padding: 12px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        .blog-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+        .blog-post {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(34,34,59,0.07);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+        .blog-post:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+        .blog-post img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-content h2 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .blog-content p {
+            flex: 1;
+            margin-bottom: 12px;
+        }
+        .blog-meta {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        .read-more {
+            align-self: flex-start;
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .read-more:hover {
+            background: var(--accent);
+            color: var(--secondary);
+        }
+        footer {
+            background: var(--secondary);
+            color: #fff;
+            text-align: center;
+            padding: 24px 0 12px 0;
+            margin-top: 40px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .container {
+                margin: 24px auto;
+            }
+            .blog-post img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container_cabecalho">
+        <h1 class="titulo">ihbrazil Full Stack</h1>
+        <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="contato.html">Fale Conosco</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="blog-list">
+            <article class="blog-post">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Desenvolvimento Web">
+                <div class="blog-content">
+                    <div class="blog-meta">10 de Junho de 2024 • ihbrazil Team</div>
+                    <h2>Como criar aplicações web modernas com Full Stack</h2>
+                    <p>Descubra as melhores práticas e ferramentas para desenvolver aplicações web robustas, escaláveis e seguras utilizando o stack completo.</p>
+                    <a href="#" class="read-more">Leia mais</a>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Tendências em Tecnologia">
+                <div class="blog-content">
+                    <div class="blog-meta">2 de Junho de 2024 • ihbrazil Team</div>
+                    <h2>Tendências em tecnologia para 2024</h2>
+                    <p>Fique por dentro das principais tendências tecnológicas que vão impactar o mercado digital e o desenvolvimento de software neste ano.</p>
+                    <a href="#" class="read-more">Leia mais</a>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Inovação Digital">
+                <div class="blog-content">
+                    <div class="blog-meta">25 de Maio de 2024 • ihbrazil Team</div>
+                    <h2>Inovação digital: como transformar seu negócio</h2>
+                    <p>Veja como a inovação digital pode impulsionar o crescimento da sua empresa e garantir competitividade no mercado atual.</p>
+                    <a href="#" class="read-more">Leia mais</a>
+                </div>
+            </article>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 ihbrazil Full Stack. Todos os direitos reservados.
+    </footer>
+</body>
+</html>

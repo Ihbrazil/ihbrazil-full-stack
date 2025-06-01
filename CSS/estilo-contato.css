@@ -21,6 +21,31 @@
     height: auto;
 }
 
+
+.contato-text {
+  flex: 1; /* Define a proporção da área do texto */
+  max-width: 100%; /* Limita a largura máxima do texto */
+  display: flex;
+  flex-direction: column; /* Coloca o texto em coluna */    
+  align-items: center; /* Centraliza o texto horizontalmente */
+  justify-content: center; /* Centraliza o texto verticalmente */
+  padding: 20px; /* Espaçamento interno */
+}
+
+.contato-text h1 {
+  font-size: 36px;
+  color: #1b3675;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+.contato-text p {
+  font-size: 18px;
+  color: #454545;
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+}
+
+
 /* Cada depoimento */
 .depoimento {
     display: none;

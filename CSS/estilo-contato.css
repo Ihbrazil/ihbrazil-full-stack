@@ -89,4 +89,14 @@
     .depoimento p {
         font-size: 16px;
     }
+    .contato-text {
+        padding: 10px;
+    }
+    .contato-text h1 {
+        font-size: 28px;
+    }
+    .contato-text p {
+        font-size: 16px;
+    }
+
 }

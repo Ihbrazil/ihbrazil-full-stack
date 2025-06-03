@@ -1,0 +1,278 @@
+/* Estilo para o currículo de desenvolvedor */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fa;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+header {
+    background: #1a237e;
+    color: #fff;
+    padding: 32px 0 24px 0;
+    text-align: center;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(26,35,126,0.08);
+    padding: 32px 24px;
+}
+.intro-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e8eaf6;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(26,35,126,0.1);
+}
+
+.intro-section h2 {
+    color: #3949ab;
+    font-size: 1.8rem;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.skills-section {
+    margin-bottom: 32px;
+}
+
+/* Seção de Formação Acadêmica */
+.education-section {
+text-align: center;
+max-width: 800px;
+margin: 40px auto;
+padding: 20px;
+background-color: #e8eaf6;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(26,35,126,0.15);
+transition: 0.3s ease-in-out;
+}
+
+.education-section:hover {
+    transform: scale(1.02);
+}
+
+.education-section h2 {
+    color: #3949ab;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.education-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.education-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.education-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a237e;
+    margin-bottom: 6px;
+}
+
+.education-institution {
+    font-size: 18px;
+    color: #3949ab;
+}
+
+.education-year {
+    font-size: 16px;
+    color: #5c6bc0;
+}
+
+/* Seção de Habilidades */
+
+.skills-section h2 {
+    color: #3949ab;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    border-left: 4px solid #3949ab;
+    padding-left: 12px;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.skill-card {
+    background: #e8eaf6;
+    border-radius: 8px;
+    padding: 18px 22px;
+    min-width: 160px;
+    flex: 1 1 200px;
+    box-shadow: 0 1px 4px rgba(26,35,126,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.15s;
+}
+.skill-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(26,35,126,0.10);
+}
+.skill-card img, .imagem {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.skill-title {
+    font-weight: bold;
+    color: #1a237e;
+    margin-bottom: 4px;
+}
+.skill-level {
+    font-size: 0.95rem;
+    color: #5c6bc0;
+}
+
+
+/* seção parceria DevMedia */
+.parceria {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+
+.parceria h2 {
+    color: #0044cc;
+}
+
+.parceria .btn-parceria {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #fdb203;
+    color: #1b3675;
+    /*background-color: #0044cc;
+    color: white;*/
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.parceria .btn-parceria img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.parceria .btn-parceria:hover {
+    background-color: #003399;
+    color: #fff;
+}
+
+/* Responsividade avançada */
+
+/* Ajuste para tablets e celulares */
+@media (max-width: 1024px) {
+    main {
+        padding: 24px;
+        max-width: 90%;
+    }
+
+    .skills-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .skill-card {
+        flex: 1 1 150px;
+    }
+}
+
+/* Ajuste para celulares menores */
+@media (max-width: 768px) {
+    header {
+        padding: 24px 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-section, .education-section {
+        padding: 16px;
+        margin: 16px auto;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .skill-card {
+        width: 90%;
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+    .education-section {
+        padding: 12px;
+        margin: 12px auto;
+    }
+
+    .skills-list {
+        gap: 8px;
+    }
+
+    .skill-card {
+        width: 95%;
+    }
+
+    .parceria {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .btn-parceria {
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+/* Ajuste para telas grandes */
+@media (min-width: 1200px) {
+    .skills-list {
+        gap: 20px;
+    }
+
+    .skill-card {
+        min-width: 200px;
+    }
+
+    .parceria {
+        gap: 25px;
+    }
+
+    main {
+        max-width: 1100px;
+    }
+}

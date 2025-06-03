@@ -31,176 +31,8 @@
         content="ihbrazil Full Stack Developer">
     <link rel="icon" href="./imagens/icones/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./CSS/estilos.css">
+    <link rel="stylesheet" href="./CSS/estilo-skills.css">
     <title>Skills | Isaias Horta Brazil</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f4f6fa;
-            margin: 0;
-            padding: 0;
-            color: #222;
-        }
-        header {
-            background: #1a237e;
-            color: #fff;
-            padding: 32px 0 24px 0;
-            text-align: center;
-        }
-        
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(26,35,126,0.08);
-            padding: 32px 24px;
-        }
-        .intro-section {
-            text-align: center;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #e8eaf6;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(26,35,126,0.1);
-        }
-
-        .intro-section h2 {
-            color: #3949ab;
-            font-size: 1.8rem;
-        }
-
-        .intro-section p {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .skills-section {
-            margin-bottom: 32px;
-        }
-        /* Seção de Formação Acadêmica */
-.education-section {
-    text-align: center;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #e8eaf6;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(26,35,126,0.15);
-    transition: 0.3s ease-in-out;
-}
-
-.education-section:hover {
-    transform: scale(1.02);
-}
-
-.education-section h2 {
-    color: #3949ab;
-    font-size: 1.8rem;
-    margin-bottom: 16px;
-}
-
-.education-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.education-card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-}
-
-.education-title {
-    font-size: 22px;
-    font-weight: bold;
-    color: #1a237e;
-    margin-bottom: 6px;
-}
-
-.education-institution {
-    font-size: 18px;
-    color: #3949ab;
-}
-
-.education-year {
-    font-size: 16px;
-    color: #5c6bc0;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    .education-section {
-        padding: 15px;
-        margin: 20px auto;
-    }
-
-    .education-title {
-        font-size: 20px;
-    }
-
-    .education-institution, .education-year {
-        font-size: 16px;
-    }
-}
-
-        .skills-section h2 {
-            color: #3949ab;
-            font-size: 1.5rem;
-            margin-bottom: 16px;
-            border-left: 4px solid #3949ab;
-            padding-left: 12px;
-        }
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .skill-card {
-            background: #e8eaf6;
-            border-radius: 8px;
-            padding: 18px 22px;
-            min-width: 160px;
-            flex: 1 1 200px;
-            box-shadow: 0 1px 4px rgba(26,35,126,0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.15s;
-        }
-        .skill-card:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 4px 16px rgba(26,35,126,0.10);
-        }
-        .skill-card img {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 10px;
-        }
-        .skill-title {
-            font-weight: bold;
-            color: #1a237e;
-            margin-bottom: 4px;
-        }
-        .skill-level {
-            font-size: 0.95rem;
-            color: #5c6bc0;
-        }
-        @media (max-width: 700px) {
-            main {
-                padding: 16px 4px;
-            }
-            .skills-list {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="container_cabecalho">
@@ -321,6 +153,22 @@
                     <span class="skill-level">Intermediário</span>
                 </li>
             </ul>
+        </section>
+
+        <section class="parceria">
+            <div class="skill-card">
+            <img class="imagem" src="./imagens/Cupom-Devmedia.png" alt="DevMedia">  <h2>Parceria com DevMedia</h2>
+            <p>Leve a DevMedia para sua empresa e impulsione o aprendizado de sua equipe!</p>
+            <p>O modelo é simples: você nos conecta e nós fazemos a venda.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFeGMw7t-Rw0iakWqg5SPL2CS58Y2JEJtwuMc2BKUApgHVQg/viewform" target="_blank" class="btn-parceria">
+                <Img
+                    src="./imagens/foguete.png"
+                    alt="foguete"
+                    >
+                    Seja um parceiro DevMedia
+                </Img> 
+            </a>
+            </div>
         </section>
     </main>
     <!-- Rodapé -->

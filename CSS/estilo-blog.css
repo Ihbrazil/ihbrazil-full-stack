@@ -1,0 +1,223 @@
+/* Estilo para o currículo de desenvolvedor */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #22223b;
+    line-height: 1.6;
+}
+
+header {
+    background: #1a73e8;
+    color: #fff;
+    padding: 32px 0 24px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 8px;
+    color: #e3e3e3;
+}
+
+nav {
+    background: #22223b;
+    padding: 12px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #fbbf24;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+.blog-post {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(34,34,59,0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+.blog-post:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+.blog-post img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.blog-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.blog-content h2 {
+    font-size: 1.3rem;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+.blog-content p {
+    flex: 1;
+    margin-bottom: 12px;
+}
+.blog-meta {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 8px;
+}
+.read-more {
+    align-self: flex-start;
+    background: #1a73e8;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.read-more:hover {
+    background: #fbbf24;
+    color: #22223b;
+}
+
+/* Responsividade avançada */
+
+/* Ajuste para telas médias (tablets e notebooks) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 0 12px;
+    }
+
+    .blog-list {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajusta colunas para telas médias */
+        gap: 24px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .blog-list {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Ajusta para telas menores */
+        gap: 20px;
+    }
+
+    .blog-post img {
+        height: 160px;
+    }
+
+    .blog-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .blog-content p {
+        font-size: 0.95rem;
+    }
+
+    .read-more {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
+}
+
+/* Ajuste para telas pequenas (até 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .blog-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+    }
+
+    .blog-post img {
+        height: 140px;
+    }
+
+    .blog-content h2 {
+        font-size: 1rem;
+    }
+
+    .read-more {
+        font-size: 13px;
+        padding: 5px 12px;
+    }
+}
+
+/* Ajuste para telas grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .blog-list {
+        grid-template-columns: repeat(3, 1fr); /* Mantém estrutura de 3 colunas em telas grandes */
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+}

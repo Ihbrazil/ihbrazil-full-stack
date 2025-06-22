@@ -35,16 +35,18 @@
   <title>Portfólio ihbrazil Full Stack</title>
 </head>
 <body>
-  <header class="container_cabecalho">
-      <h1 class="titulo">ihbrazil Full Stack</h1>
-      <div class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="skills.html">Skills</a>
-        <a href="blog.html">Blog</a>
-        <a href="contato.html">Fale Conosco</a>
-      </div>
-  </header>
+    <!-- Cabeçalho padrão -->
+    <header class="container_cabecalho">
+        <h1 class="titulo">ihbrazil Full Stack</h1>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="skills.html">Skills</a>
+            <a href="blog.html">Blog</a>
+            <a href="pacotes.html">Pacotes</a>
+            <a href="contato.html">Fale Conosco</a>
+        </nav>
+    </header>
 
   <section class="main-section">
     <div class="portfolio-text examples-portfolio">
@@ -79,7 +81,7 @@
           <img src="./imagens/img-3.png" alt="" class="image">
           <div class="overlay">
             <div class="botao_imagem">
-              <a href="https://www.prevenus.com.br/Softwares" target="_blank">Veja mais</a>
+              <a href="https://www.prevenus.com.br/Downloads" target="_blank">Veja mais</a>
             </div>
           </div>
         </div>
@@ -87,7 +89,7 @@
           <img src="./imagens/img-4.png" alt="" class="image">
           <div class="overlay">
             <div class="botao_imagem">
-              <a href="https://www.prevenus.com.br/Softwares" target="_blank">Veja mais</a>
+              <a href="https://www.prevenus.com.br/Downloads" target="_blank">Veja mais</a>
             </div>
           </div>
         </div>
@@ -101,11 +103,19 @@
         </div>
       </div>
       <div class="botao">
-        <a href="#">Veja mais</a>
+        <a href="https://github.com/Ihbrazil/" target="_blank">Veja mais</a>
       </div>
     </div>
   </section>
   <!-- portfolio section end -->
+
+  <section class="github-section">
+    <h2 class="titulo">Projetos do GitHub</h2>
+    <div 
+      id="repositorios"
+      class="repositorio-container">
+    </div>
+  </section>
 
 
   <footer class="footer">
@@ -114,5 +124,28 @@
       <a href="https://www.devmedia.com.br/join/?member=isaias-36&ebook=manual" target="_blank">Seja um Programador DevMedia</a>
     </p>
   </footer>
+
+  <script>
+    async function carregarRepositorios() {
+      const resposta = await fetch("https://api.github.com/users/ihbrazil/repos");
+      const repositorios = await resposta.json();
+
+      const container = document.getElementById("repositorios");
+      repositorios.slice(0, 6).forEach(repo => {
+        const card = document.createElement("div");
+        card.className = "repositorio-card";
+        card.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repo.description || "Projeto sem descrição."}</p>
+          <a href="${repo.html_url}" target="_blank">Ver no GitHub</a>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    carregarRepositorios();
+  </script>
+
+
 </body>
 </html>

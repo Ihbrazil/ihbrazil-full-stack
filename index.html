@@ -34,75 +34,79 @@
   <title>Portfólio ihbrazil Full Stack</title>
 </head>
 <body>
-  <header class="container_cabecalho">
-    <h1 class="titulo">ihbrazil Full Stack</h1>
-    <div class="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfólio</a>
-      <a href="skills.html">Skills</a>
-      <a href="blog.html">Blog</a>
-      <a href="contato.html">Fale Conosco</a>
-    </div>
-  </header>
+    <!-- Cabeçalho padrão -->
+    <header class="container_cabecalho">
+        <h1 class="titulo">ihbrazil Full Stack</h1>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="skills.html">Skills</a>
+            <a href="blog.html">Blog</a>
+            <a href="pacotes.html">Pacotes</a>
+            <a href="contato.html">Fale Conosco</a>
+        </nav>
+    </header>
 
-  <section class="main-section">
-    <div class="portfolio-text">
-      <h1>Criação Digital: Quando a Imaginação Ganha Vida</h1>
-      <p>Cada projeto pessoal nasce de uma paixão, uma curiosidade ou um desejo de criar algo único. Seja um portfólio, um blog ou um aplicativo, cada linha de código e cada decisão são parte de um processo criativo que dá vida a uma visão.</p>
-      <p>Com tecnologia, dedicação e criatividade, emergem sites, sistemas e automações que tornam projetos reais e funcionais. O mundo digital é um espaço ilimitado, onde cada ideia pode se tornar uma solução, cada conceito pode evoluir e cada criação pode refletir uma identidade.</p>
-    </div>
-    <div class="portfolio-image">
-      <img src="./imagens/agencia-de-tecnologia.png" alt="Imagem do portfólio">
-    </div>
-  </section>
-
-  <section>
-    <div class="cta-buttons">
-      <button
-          onclick="document.getElementById('formulario-de-projeto').style.display='block'">
-          Inicie seu projeto
-      </button>
-      <button id="whatsapp-btn" onclick="window.open('https://api.whatsapp.com/send?phone=+5532991538912&text=Olá, gostaria de saber mais sobre os serviços oferecidos pela ihbrazil Agência Full Stack.', '_blank')">
-        Fale pelo nosso WhatsApp
-      </button>      
-    </div>
-  </section>
-
-  <section>
-    <!-- Formulário interativo -->
-    <div id="formulario-de-projeto" class="container-formulario">
-      <h2>Conte-nos sobre seu projeto</h2>
-      <form action="mailto:ihbrazil@gmail.com" method="post" enctype="text/plain">
-      <form action="/submit" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="name" required>
-        
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="project-type">Tipo de projeto:</label>
-        <select id="tipo-de-projeto" name="project-type" required>
-          <option value="site">Site Institucional</option>
-          <option value="ecommerce">E-commerce</option>
-          <option value="web-app">Aplicação Web</option>
-        </select>
-        
-        <label for="detalhes">Detalhes adicionais:</label>
-        <textarea id="detalhes" name="details" rows="4" placeholder="Exemplo: funcionalidade desejada, estilo visual..."></textarea>
-        <div class="cta-buttons">
-          <button type="submit">Enviar</button>
-          <button type="button" onclick="document.getElementById('formulario-de-projeto').style.display='none'">Cancelar</button>
+    <main>
+      <section class="main-section">
+        <div class="portfolio-text">
+          <h1>Criação Digital: Quando a Imaginação Ganha Vida</h1>
+          <p>Cada projeto pessoal nasce de uma paixão, uma curiosidade ou um desejo de criar algo único. Seja um portfólio, um blog ou um aplicativo, cada linha de código e cada decisão são parte de um processo criativo que dá vida a uma visão.</p>
+          <p>Com tecnologia, dedicação e criatividade, emergem sites, sistemas e automações que tornam projetos reais e funcionais. O mundo digital é um espaço ilimitado, onde cada ideia pode se tornar uma solução, cada conceito pode evoluir e cada criação pode refletir uma identidade.</p>
         </div>
-      </form>
-    </div>
-  </section>
+        <div class="portfolio-image">
+          <img src="./imagens/agencia-de-tecnologia.png" alt="Imagem do portfólio">
+        </div>
+      </section>
 
-  <!-- Rodapé -->
-  <footer class="footer">
-    <p>
-      © 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.
-      <a href="https://www.devmedia.com.br/join/?member=isaias-36&ebook=manual" target="_blank">Seja um Programador DevMedia</a>
-    </p>
-  </footer>
+      <section>
+        <div class="cta-buttons">
+          <button
+              onclick="document.getElementById('formulario-de-projeto').style.display='block'">
+              Inicie seu projeto
+          </button>
+          <button id="whatsapp-btn" onclick="window.open('https://api.whatsapp.com/send?phone=+5532991538912&text=Olá, gostaria de saber mais sobre os serviços oferecidos pela ihbrazil Agência Full Stack.', '_blank')">
+            Fale pelo nosso WhatsApp
+          </button>      
+        </div>
+      </section>
+
+      <section>
+        <!-- Formulário interativo -->
+        <div id="formulario-de-projeto" class="container-formulario">
+          <h2>Conte-nos sobre seu projeto</h2>
+          <form action="mailto:ihbrazil@gmail.com" method="post" enctype="text/plain">
+          <form action="/submit" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="name" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="project-type">Tipo de projeto:</label>
+            <select id="tipo-de-projeto" name="project-type" required>
+              <option value="site">Site Institucional</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="web-app">Aplicação Web</option>
+            </select>
+            
+            <label for="detalhes">Detalhes adicionais:</label>
+            <textarea id="detalhes" name="details" rows="4" placeholder="Exemplo: funcionalidade desejada, estilo visual..."></textarea>
+            <div class="cta-buttons">
+              <button type="submit">Enviar</button>
+              <button type="button" onclick="document.getElementById('formulario-de-projeto').style.display='none'">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <p>
+        © 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.
+        <a href="https://www.devmedia.com.br/join/?member=isaias-36&ebook=manual" target="_blank">Seja um Programador DevMedia</a>
+      </p>
+    </footer>
 </body>
 </html>

@@ -1,6 +1,11 @@
 /* ================================
    ESTILOS GERAIS
 ================================ */
+/* Layout base */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -28,12 +33,11 @@ main {
 ================================ */
 .topo {
   background: linear-gradient(to right, #012169, #003399);
-  border: #012169 2px solid;
+  padding: 15px 10px;
   border-bottom: 2px solid #fedd00;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

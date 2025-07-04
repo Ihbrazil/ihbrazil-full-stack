@@ -90,32 +90,39 @@
   }
 }
 
-/* Responsividade para tablets e desktops */
+/* =======================
+   TABLETS – 601px a 1024px
+======================= */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .navbar {
-    padding: 0.75rem 1.5rem;
-    flex-wrap: nowrap;
-  }
-
-  .navbar .logo {
-    font-size: 1.4rem;
-  }
-
   .navbar .menu {
-    gap: 0.75rem;
+    display: none;
+    flex-direction: column;
+    background: #012169;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px;
+    padding: 0.5rem 0;
   }
 
   .navbar .menu a {
-    font-size: 0.95rem;
-    padding: 0.5rem 0.6rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar .menu.active {
+    display: flex;
   }
 
   .navbar .sanduiche {
-    display: none;
+    display: flex;
   }
 }
 
-/* Responsividade para telas grandes */
+/* =======================
+   DESKTOPS – 1025px a 1439px
+======================= */
 @media (min-width: 1025px) and (max-width: 1439px) {
   .navbar {
     padding: 1rem 2.5rem;
@@ -123,6 +130,10 @@
 
   .navbar .logo {
     font-size: 1.6rem;
+  }
+
+  .navbar .menu {
+    gap: 1.25rem;
   }
 
   .navbar .menu a {
@@ -135,6 +146,9 @@
   }
 }
 
+/* =======================
+   TELAS GRANDES – 1440px+
+======================= */
 @media (min-width: 1440px) {
   .navbar {
     max-width: 1400px;

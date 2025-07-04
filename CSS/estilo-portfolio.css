@@ -1,252 +1,223 @@
-/* Definição de variáveis para facilitar mudanças */
-:root {
-    --primary-color: #fdb203;
-    --secondary-color: #1b3675;
-    --font-color-light: #ffffff;
-    --overlay-color: rgba(45, 45, 45, 0.5);
-  }
-  
-  /* Estilos globais */
-  .examples-portfolio {
-    text-align: center;
-    max-width: 100%; /* Largura máxima do texto */
-  }
-  
-  .linha-de-imagem {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-  
-  .container {
-    background-position: center;
-    background-size: cover;
-    padding: 20px; /* Espaçamento geral */
-  }
-  
-  /* Seção de portfólio */
-  .portfolio_section {
-    width: 100%;
-    padding: 0 40px;
-    box-sizing: border-box;
-  }
-  
-  /* Elementos principais do portfólio */
+/* =============================
+   SEÇÃO INTRODUTÓRIA
+============================= */
+.examples-portfolio {
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  color: #012169;
+}
+
+.examples-portfolio h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.examples-portfolio p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* =============================
+   PORTFÓLIO IMAGENS
+============================= */
+.portfolio_section {
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.linha-de-imagem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.container_imagem {
+  flex: 1 1 calc(25% - 20px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.container_imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.container_imagem:hover img {
+  transform: scale(1.05);
+}
+
+/* =============================
+   OVERLAY E BOTÃO IMAGEM
+============================= */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_imagem:hover .overlay {
+  opacity: 1;
+}
+
+.botao_imagem a {
+  background-color: #fedd00;
+  color: #012169;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.botao_imagem a:hover {
+  background-color: #012169;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =============================
+   BOTÃO “VEJA MAIS”
+============================= */
+.botao {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.botao a {
+  background-color: #fedd00;
+  color: #012169;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.botao a:hover {
+  background-color: #012169;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =============================
+   GITHUB REPOSITÓRIOS
+============================= */
+.github-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.github-section h2 {
+  font-size: 2rem;
+  color: #012169;
+  margin-bottom: 30px;
+}
+
+.repositorio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.repositorio-card {
+  background-color: #012169;
+  color: white;
+  width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.repositorio-card:hover {
+  transform: translateY(-5px);
+}
+
+.repositorio-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.repositorio-card p {
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 48px;
+  color: #dddddd;
+}
+
+.repositorio-card a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #fedd00;
+  color: #012169;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.repositorio-card a:hover {
+  background-color: #ffffff;
+  color: #012169;
+}
+
+/* =============================
+   RESPONSIVIDADE
+============================= */
+@media (max-width: 1024px) {
   .container_imagem {
-    flex: 1 1 calc(33% - 20px); /* Ajuste flexível para 3 imagens por linha */
-    margin: 10px;
-
-    overflow: hidden;
-    box-sizing: border-box;
-    position: relative; /* Necessário para o posicionamento absoluto para posionar os botões no centro de cada imagem*/
+    flex: 1 1 calc(33.33% - 20px);
   }
-  
-  .container_imagem img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Efeito de overlay */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--overlay-color);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .container_imagem:hover .overlay {
-    opacity: 1;
-  }
-  
-  /* Botões */
-  .botao_imagem {
-    position: absolute;
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Garante o alinhamento exato ao centro */
-    z-index: 2; /* Assegura que o botão esteja visível sobre a imagem */
 }
 
-  .botao_imagem a {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 18px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+@media (max-width: 768px) {
+  .container_imagem {
+    flex: 1 1 calc(50% - 20px);
   }
 
-  .botao {
-    text-align: center; /* Centraliza o botão horizontalmente */
-    margin-top: 20px; /* Adiciona espaçamento entre as imagens e o botão */
-}
-
+  .botao_imagem a,
   .botao a {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 18px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    font-size: 15px;
+    padding: 10px 22px;
   }
-  
-  .botao_imagem a:hover,
-  .botao a:hover {
-    background-color: var(--secondary-color);
-    color: var(--font-color-light);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .container_imagem {
+    flex: 1 1 100%;
   }
 
-  .github-section {
-    max-width: 100%;
-    padding: 40px 20px;
-    text-align: center;
+  .botao_imagem a,
+  .botao a {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
-  .repositorio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+  .examples-portfolio h1 {
+    font-size: 1.5rem;
   }
 
   .repositorio-card {
-    background-color: #1b3675;
-    color: #ffffff;
-    width: 280px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    text-align: left;
-    transition: transform 0.3s ease;
-  }
-
-  .repositorio-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .repositorio-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .repositorio-card p {
-    font-size: 14px;
-    line-height: 1.4;
-    min-height: 48px;
-  }
-
-  .repositorio-card a {
-    display: inline-block;
-    margin-top: 10px;
-    background-color: #fdb203;
-    color: #1b3675;
-    padding: 10px 16px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-  }
-
-  .repositorio-card a:hover {
-    background-color: #1b3675;
-    color: #ffffff;
-  }
-
-  
-/* Responsividade */
-/* Para dispositivos extra pequenos (320px) */
-@media (max-width: 320px) {
-  .container_imagem {
-    flex: 1 1 100%; /* Cada imagem ocupa 100% da largura */
-  }
-
-  .portfolio_section {
-    padding: 0 5px; /* Reduz ainda mais as margens laterais */
-  }
-
-  .botao_imagem a {
-    font-size: 12px; /* Ajusta o tamanho da fonte dos botões */
-    padding: 6px 12px; /* Torna os botões mais compactos */
-  }
-}
-
-
-
-/* Para dispositivos pequenos (480px) */
-@media (max-width: 480px) {
-  .container_imagem {
-    flex: 1 1 100%; /* Cada imagem ocupa 100% da largura */
-  }
-
-  .portfolio_section {
-    padding: 0 10px; /* Reduz ainda mais as margens laterais */
-  }
-
-  .botao_imagem a {
-    font-size: 10px; /* Ajusta o tamanho da fonte dos botões */
-    padding: 4px 14px; /* Torna os botões mais compactos */
-  }
-}
-
-/* Para tablets e dispositivos médios (768px) */
-@media (max-width: 768px) {
-  .container_imagem {
-    flex: 1 1 calc(50% - 20px); /* Ajusta para 2 imagens por linha */
-  }
-
-  .portfolio_section {
-    padding: 0 20px; /* Reduz as margens laterais */
-  }
-
-  .botao_imagem a {
-    font-size: 12px; /* Reduz o tamanho da fonte dos botões */
-    padding: 6px 16px; /* Ajusta o espaçamento interno */
-  }
-}
-
-/* Responsividade entre 768px e 1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .container_imagem {
-    flex: 1 1 calc(33% - 20px); /* Mantém 3 imagens por linha */
-  }
-
-  .portfolio_section {
-    padding: 0 30px; /* Ajusta o espaçamento para telas maiores */
-  }
-
-  .botao_imagem a {
-    font-size: 12px; /* Tamanho médio para botões */
-    padding: 6px 16px; /* Mantém o espaçamento interno confortável */
-  }
-}
-
-
-/* Para dispositivos grandes (1024px ou mais) */
-@media (min-width: 1024px) {
-  .container_imagem {
-    flex: 1 1 calc(25% - 20px); /* Ajuste para 4 imagens por linha */
-  }
-
-  .portfolio_section {
-    padding: 0 60px; /* Aumenta o espaçamento para utilizar melhor o espaço */
-  }
-
-  .botao_imagem a {
-    font-size: 20px; /* Aumenta o tamanho da fonte dos botões */
-    padding: 14px 36px; /* Adiciona espaçamento interno para telas maiores */
+    width: 90%;
   }
 }

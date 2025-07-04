@@ -1,199 +1,221 @@
-/* html, body { height: 100% }: garante que o body preencha a altura da tela.
-
-body com display: flex e flex-direction: column: empilha os elementos verticalmente.
-
-main com flex: 1: faz com que ele cresça e “empurre” o rodapé para o final da página, mesmo sem muito conteúdo.*/
-
-html, body {
-  height: 100%;
+/* ================================
+   BASE E ESTRUTURA
+================================ */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
   margin: 0;
   padding: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 main {
   flex: 1;
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
 }
 
-/* Seção de depoimentos */
-.depoimentos-section {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    margin: 50px auto;
-}
-
-/* Carrossel */
-.depoimentos-carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    max-width: 100%;
-    height: auto;
-}
-
-
-.contato-text {
-  flex: 1; /* Define a proporção da área do texto */
-  max-width: 100%; /* Limita a largura máxima do texto */
-  display: flex;
-  flex-direction: column; /* Coloca o texto em coluna */    
-  align-items: center; /* Centraliza o texto horizontalmente */
-  justify-content: center; /* Centraliza o texto verticalmente */
-  padding: 20px; /* Espaçamento interno */
+/* ================================
+   SEÇÃO INTRODUTÓRIA
+================================ */
+.main-section {
+  background: #f9f9f9; /*linear-gradient(to right, #fedd00, #009739);*/
+  padding: 40px 20px;
+  text-align: center;
+  color: #012169;
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .contato-text h1 {
-  font-size: 36px;
-  color: #1b3675;
-  margin-bottom: 20px;
-  text-transform: uppercase; /* Texto em maiúsculas */
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .contato-text p {
-  font-size: 18px;
-  color: #454545;
-  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  font-size: 1.1rem;
+  color: #012169;
+  font-weight: 500;
 }
 
+/* ================================
+   DEPOIMENTOS
+================================ */
+.depoimentos-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
 
-/* Cada depoimento */
+.depoimentos-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #012169;
+}
+
+.depoimentos-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
 .depoimento {
-    display: none;
+  background: #f9f9f9;
+  border-left: 6px solid #fedd00;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  position: relative;
+  display: none; /* controlado via JS */
+}
+
+.depoimento img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 0 4px #00973920;
+}
+
+.depoimento p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.depoimento span {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ================================
+   BOTÕES DE AÇÃO
+================================ */
+.cta-section {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cta-buttons button {
+  background-color: #fedd00;
+  color: #012169;
+  padding: 12px 26px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons button:hover {
+  background-color: #012169;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   FORMULÁRIO
+================================ */
+.container-formulario {
+  background-color: #ffffff;
+  margin: 40px auto;
+  max-width: 640px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  display: none;
+}
+
+.container-formulario h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #012169;
+  text-align: center;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #012169;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button[type="submit"] {
+  background-color: #fedd00;
+  color: #012169;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #009739;
+  color: #fff;
+}
+
+form button[type="button"] {
+  margin-left: 10px;
+  background-color: #e5e5e5;
+  color: #333;
+}
+
+form button[type="button"]:hover {
+  background-color: #ccc;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+@media (max-width: 768px) {
+  .depoimentos-carousel {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-}
+  }
 
-/* Imagem do cliente */
-.depoimento img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
+  .cta-buttons {
+    flex-direction: column;
+  }
 
-/* Texto do depoimento */
-.depoimento p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #1b3675;
-}
+  .cta-buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
 
-/* Nome do cliente */
-.depoimento span {
-    font-size: 14px;
-    color: #fdb203;
-}
-
-/* Responsividade avançada */
-
-/* Ajuste para tablets e celulares */
-@media (max-width: 1024px) {
-    .depoimentos-section {
-        padding: 30px 16px;
-        max-width: 90%;
-    }
-
-    .depoimentos-carousel {
-        flex-wrap: wrap;
-    }
-
-    .depoimento img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .contato-text h1 {
-        font-size: 32px;
-    }
-
-    .contato-text p {
-        font-size: 16px;
-    }
-}
-
-/* Ajuste para celulares menores */
-@media (max-width: 768px) {
-    .depoimentos-section {
-        padding: 24px;
-        margin: 20px auto;
-    }
-
-    .depoimentos-carousel {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .depoimento img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .contato-text h1 {
-        font-size: 28px;
-    }
-
-    .contato-text p {
-        font-size: 15px;
-        line-height: 1.4;
-    }
-}
-
-/* Ajuste para telas muito pequenas */
-@media (max-width: 480px) {
-    .depoimentos-section {
-        padding: 20px;
-        margin: 15px auto;
-    }
-
-    .contato-text h1 {
-        font-size: 24px;
-    }
-
-    .contato-text p {
-        font-size: 14px;
-    }
-
-    .depoimento img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .depoimento p {
-        font-size: 16px;
-    }
-}
-
-/* Ajuste para telas grandes */
-@media (min-width: 1200px) {
-    .depoimentos-section {
-        max-width: 1100px;
-    }
-
-    .contato-text h1 {
-        font-size: 40px;
-    }
-
-    .contato-text p {
-        font-size: 20px;
-    }
-
-    .depoimento img {
-        width: 100px;
-        height: 100px;
-    }
+  .container-formulario {
+    width: 90%;
+  }
 }

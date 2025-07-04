@@ -1,151 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async src="https://www.googletagmanager.com/gtag/js?id=G-8DPD3RJVDW">
-  </script>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DPD3RJVDW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-8DPD3RJVDW');
   </script>
-  <!-- Google tag (gtag.js) -->
 
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <meta 
-    name="description" 
-    content="Desenvolvimento Full Stack de alto nível! A ihbrazil Full Stack cria soluções digitais completas, do front-end ao back-end, garantindo inovação, automação e eficiência para sua empresa. Descubra agora!"
-  >
-  <meta
-    name="keywords"
-    content="Desenvolvimento Web, Full Stack, Tecnologia, Automação, Chatbots, Marketing Digital, Programação, Software, Front-end, Back-end, Inovação"
-  >
-  <meta
-    name="author"
-    content="ihbrazil Full Stack Developer">
-  <link rel="icon" href="./imagens/icones/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./CSS/estilos.css">
-  <link rel="stylesheet" href="./CSS/estilo-portfolio.css">
-  <title>Portfólio ihbrazil Full Stack</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de projetos da ihbrazil Full Stack: sites, sistemas, automações e mais." />
+  <meta name="keywords" content="Portfólio, Full Stack, Web, Aplicações, Automação, Desenvolvimento" />
+  <meta name="author" content="ihbrazil Full Stack Developer" />
+  <title>Portfólio | ihbrazil Full Stack</title>
+
+  <link rel="icon" href="./imagens/icones/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./CSS/estilos.css" />
+  <link rel="stylesheet" href="./CSS/responsivo_celular.css" />
+  <link rel="stylesheet" href="./CSS/responsivo_tablet.css" />
+  <link rel="stylesheet" href="./CSS/menu_sanduiche.css" />
+  <link rel="stylesheet" href="./CSS/estilo-portfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    <!-- Cabeçalho padrão -->
-    <header class="container_cabecalho">
-        <h1 class="titulo">ihbrazil Full Stack</h1>
-        <nav class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfólio</a>
-            <a href="skills.html">Skills</a>
-            <a href="blog.html">Blog</a>
-            <a href="pacotes.html">Pacotes</a>
-            <a href="contato.html">Fale Conosco</a>
-        </nav>
-    </header>
+  <header class="topo">
+    <nav class="navbar">
+      <div class="container_logo">
+        <img src="./imagens/ihbrazilfullstack-logo.jpg" alt="logo ihbrazil Full Stack" />
+        <p>ihbrazil Full Stack</p>
+      </div>
 
-  <section class="main-section">
-    <div class="portfolio-text examples-portfolio">
-      <h1>Portfólio</h1>
-      <p>Explore exemplos de sites, aplicativos, automações e sistemas inovadores desenvolvidos para transformar a gestão e operação dos negócios dos nossos clientes.</p>
-    </div>
-  </section>
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="pacotes.html">Pacotes</a>
+        <a href="contato.html">Fale Conosco</a>
+      </div>
 
-  <!-- portfolio section start -->
-  <section class="portfolio_section">
-    <div class="container">
-      <div class="linha-de-imagem">
-        <div class="container_imagem">
-          <img src="./imagens/img-1.png" alt="" class="image">
-          <div class="overlay">
-            <div class="botao_imagem">
-              <a href="https://prevenus.com.br" target="_blank">Veja mais</a>
+      <button class="sanduiche" id="sanduiche" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <section class="main-section">
+      <div class="portfolio-text examples-portfolio">
+        <h1>Portfólio</h1>
+        <p>Explore exemplos de sites, aplicativos, automações e sistemas inovadores desenvolvidos para transformar a gestão e operação dos nossos clientes.</p>
+      </div>
+    </section>
+
+    <!-- Galeria de imagens -->
+    <section class="portfolio_section">
+      <div class="container">
+        <div class="linha-de-imagem">
+          <div class="container_imagem">
+            <img src="./imagens/img-1.png" alt="Projeto Prevênus" class="image" />
+            <div class="overlay">
+              <div class="botao_imagem">
+                <a href="https://prevenus.com.br" target="_blank">Veja mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_imagem">
+            <img src="./imagens/img-2.png" alt="Site Ro Turismo" class="image" />
+            <div class="overlay">
+              <div class="botao_imagem">
+                <a href="https://ro-turismo-eventos.vercel.app/" target="_blank">Veja mais</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="container_imagem">
-          <img src="./imagens/img-2.png" alt="" class="image">
-          <div class="overlay">
-            <div class="botao_imagem">
-              <a href="https://ro-turismo-eventos.vercel.app/" target="_blank">Veja mais</a>
+
+        <div class="linha-de-imagem">
+          <div class="container_imagem">
+            <img src="./imagens/img-3.png" alt="Área de downloads Prevênus" class="image" />
+            <div class="overlay">
+              <div class="botao_imagem">
+                <a href="https://www.prevenus.com.br/Downloads" target="_blank">Veja mais</a>
+              </div>
             </div>
           </div>
+
+          <div class="container_imagem">
+            <img src="./imagens/img-4.png" alt="Sistema interno Prevênus" class="image" />
+            <div class="overlay">
+              <div class="botao_imagem">
+                <a href="https://www.prevenus.com.br/Downloads" target="_blank">Veja mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_imagem">
+            <img src="./imagens/img-5.png" alt="Palpiteiro App" class="image" />
+            <div class="overlay">
+              <div class="botao_imagem">
+                <a href="https://palpiteiro-flex-puce.vercel.app/" target="_blank">Veja mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="botao">
+          <a href="https://github.com/Ihbrazil" target="_blank">Veja mais no GitHub</a>
         </div>
       </div>
-      <div class="linha-de-imagem">
-        <div class="container_imagem">
-          <img src="./imagens/img-3.png" alt="" class="image">
-          <div class="overlay">
-            <div class="botao_imagem">
-              <a href="https://www.prevenus.com.br/Downloads" target="_blank">Veja mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="container_imagem">
-          <img src="./imagens/img-4.png" alt="" class="image">
-          <div class="overlay">
-            <div class="botao_imagem">
-              <a href="https://www.prevenus.com.br/Downloads" target="_blank">Veja mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 container_imagem">
-          <img src="./imagens/img-5.png" alt="" class="image">
-          <div class="overlay">
-            <div class="botao_imagem">
-              <a href="https://palpiteiro-flex-puce.vercel.app/" target="_blank">Veja mais</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="botao">
-        <a href="https://github.com/Ihbrazil/" target="_blank">Veja mais</a>
-      </div>
-    </div>
-  </section>
-  <!-- portfolio section end -->
+    </section>
 
-  <section class="github-section">
-    <h2 class="titulo">Projetos do GitHub</h2>
-    <div 
-      id="repositorios"
-      class="repositorio-container">
-    </div>
-  </section>
-
+    <!-- Repositórios do GitHub -->
+    <section class="github-section">
+      <h2 class="titulo">Projetos do GitHub</h2>
+      <div id="repositorios" class="repositorio-container"></div>
+    </section>
+  </main>
 
   <footer class="footer">
     <p>
-      © 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.
+      © 2025 ihbrazil Full Stack — Transformando ideias em realidade digital.
       <a href="https://www.devmedia.com.br/join/?member=isaias-36&ebook=manual" target="_blank">Seja um Programador DevMedia</a>
     </p>
   </footer>
 
+  <!-- GitHub API -->
   <script>
     async function carregarRepositorios() {
-      const resposta = await fetch("https://api.github.com/users/ihbrazil/repos");
-      const repositorios = await resposta.json();
+      try {
+        const resposta = await fetch("https://api.github.com/users/ihbrazil/repos");
+        const repositorios = await resposta.json();
+        const container = document.getElementById("repositorios");
 
-      const container = document.getElementById("repositorios");
-      repositorios.slice(0, 6).forEach(repo => {
-        const card = document.createElement("div");
-        card.className = "repositorio-card";
-        card.innerHTML = `
-          <h3>${repo.name}</h3>
-          <p>${repo.description || "Projeto sem descrição."}</p>
-          <a href="${repo.html_url}" target="_blank">Ver no GitHub</a>
-        `;
-        container.appendChild(card);
-      });
+        repositorios.slice(0, 6).forEach(repo => {
+          const card = document.createElement("div");
+          card.className = "repositorio-card";
+          card.innerHTML = `
+            <h3>${repo.name}</h3>
+            <p>${repo.description || "Projeto sem descrição."}</p>
+            <a href="${repo.html_url}" target="_blank">Ver no GitHub</a>
+          `;
+          container.appendChild(card);
+        });
+      } catch (e) {
+        console.error("Erro ao carregar repositórios:", e);
+      }
     }
 
     carregarRepositorios();
   </script>
 
-
+  <script src="js/menuSaduiche.js"></script>
 </body>
 </html>

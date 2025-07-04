@@ -1,0 +1,90 @@
+.navbar {
+  background: linear-gradient(to left, rgba(254, 221, 0, 0.85), rgba(0, 151, 57, 0.85));
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.navbar .menu a:hover {
+  background: rgba(1, 33, 105, 0.2);
+}
+
+/* === Estilo para o botão sanduíche === */
+.navbar .sanduiche {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: #fedd00;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.navbar .sanduiche:hover {
+  background: #009739;
+}
+
+.navbar .sanduiche span {
+  width: 22px;
+  height: 3px;
+  background: #012169;
+  border-radius: 2px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 700px) {
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    background: #012169;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px;
+    padding: 0.5rem 0;
+  }
+
+  .navbar .menu a {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+  }
+
+  .navbar .sanduiche {
+    display: flex;
+  }
+}

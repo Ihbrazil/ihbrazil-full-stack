@@ -1,0 +1,151 @@
+  /* Configuração para tablets (tela média) */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Topo da página */
+    .topo {
+      padding: 15px 10px; /* Espaçamento interno adequado para tablets */
+      border-bottom: 2px solid #fedd00; /* Cor amarela bandeira do Brasil*/ /* Mantém a borda destacada */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra moderada */
+    }
+  
+    .container_logo {
+      flex-direction: row; /* Alinha os itens lado a lado */
+      justify-content: space-between; /* Distribui os elementos */
+      padding: 10px 15px;
+    }
+  
+    .container_logo img {
+      width: 30px; /* Ajusta o tamanho da imagem para tablets */
+      height: 30px;
+      margin-right: 10px;
+    }
+  
+    .container_logo p {
+      font-size: 20px; /* Ajusta o tamanho do texto para telas médias */
+    }
+  
+    .links {
+      font-size: 16px; /* Fonte levemente maior para navegação confortável */
+    }
+  
+    .container_img_divulgacao img {
+      max-width: 100%; /* Garante proporção correta */
+      height: auto;
+    }
+  
+    /* Seção apresentação */
+    .secao_apresentacao {
+      padding: 100px 20px 70px; /* Espaçamento intermediário */
+      gap: 30px;
+    }
+  
+    .container_texto_apresentacao h1 {
+      font-size: 28px; /* Tamanho maior para tablets */
+      letter-spacing: 2px; /* Ajusta o espaçamento */
+    }
+  
+    .container_texto_apresentacao p {
+      font-size: 18px; /* Melhor ajuste para leitura */
+      line-height: 1.6em; /* Espaçamento confortável */
+    }
+  
+    /* Lista de serviços */
+    .lista_servicos {
+      flex-wrap: wrap; /* Permite itens lado a lado e quebra de linha */
+      gap: 20px; /* Espaço mais amplo entre itens */
+    }
+  
+    .lista_servicos li {
+      flex: 1 1 45%; /* Permite dois itens por linha */
+      font-size: 16px; /* Ajuste no tamanho do texto */
+    }
+  
+    .lista_servicos li img {
+      width: 25px;
+      height: 25px;
+    }
+  
+    /* Seção benefícios */
+    .secao_beneficios {
+      padding: 40px 15px;
+      gap: 25px;
+    }
+  
+    .secao_beneficios div h2 {
+      font-size: 24px;
+    }
+  
+    .lista_beneficios li {
+      flex: 1 1 48%; /* Distribui dois itens por linha */
+      font-size: 16px;
+    }
+  
+    /* Seção destinos */
+    .secao_destinos {
+      padding: 40px 20px;
+      gap: 25px;
+    }
+  
+    .container_destinos {
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+  
+    .card_destinos {
+      flex: 1 1 48%; /* Distribui dois cartões por linha */
+      padding: 15px;
+    }
+  
+    .card_destinos h3 {
+      font-size: 20px; /* Tamanho maior para títulos */
+    }
+  
+    /* Seção de contatos */
+    .secao_informacoes {
+      padding: 40px 20px;
+      gap: 30px;
+    }
+  
+    .container_informacoes {
+      flex-direction: row; /* Distribui os elementos lado a lado */
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+  
+    .agenda_telefones li {
+      flex-direction: row; /* Ícones e texto alinhados horizontalmente */
+      text-align: left; /* Alinhamento padrão para tablets */
+    }
+  
+    .icone_whatsapp {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  
+    /* Seção localização */
+    .secao_localizacao {
+      margin-top: 5%;
+      padding: 20px;
+      gap: 25px;
+    }
+  
+    .secao_localizacao iframe {
+      height: 300px; /* Altura maior para melhor visualização */
+    }
+  
+    /* Seção Redes Sociais */
+    .secao_redes_sociais {
+      padding: 80px 20px 60px;
+      gap: 25px;
+    }
+  
+    .container_texto_redes_sociais h1 {
+      font-size: 26px; /* Tamanho maior para títulos */
+      letter-spacing: 2px;
+    }
+  
+    .icone_redes_sociais {
+      width: 30px;
+      height: 30px;
+    }
+  }

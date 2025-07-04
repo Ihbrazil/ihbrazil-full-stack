@@ -1,4 +1,5 @@
 /* Estilo para o currículo de desenvolvedor */
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #f4f6fa;
@@ -6,8 +7,9 @@ body {
     padding: 0;
     color: #222;
 }
+
 header {
-    background: #1a237e;
+    background: #012169; /* Cor azul bandeira do Brasil*/
     color: #fff;
     padding: 32px 0 24px 0;
     text-align: center;
@@ -32,7 +34,7 @@ main {
 }
 
 .intro-section h2 {
-    color: #3949ab;
+    color: #012169; /* Cor azul bandeira do Brasil*/
     font-size: 1.8rem;
 }
 
@@ -62,7 +64,7 @@ transition: 0.3s ease-in-out;
 }
 
 .education-section h2 {
-    color: #3949ab;
+    color: #012169; /* Cor azul bandeira do Brasil*/
     font-size: 1.8rem;
     margin-bottom: 16px;
 }
@@ -83,7 +85,7 @@ transition: 0.3s ease-in-out;
 .education-title {
     font-size: 22px;
     font-weight: bold;
-    color: #1a237e;
+    color: #012169; /* Cor azul bandeira do Brasil*/
     margin-bottom: 6px;
 }
 
@@ -100,10 +102,10 @@ transition: 0.3s ease-in-out;
 /* Seção de Habilidades */
 
 .skills-section h2 {
-    color: #3949ab;
+    color: #012169; /* Cor azul bandeira do Brasil*/
     font-size: 1.5rem;
     margin-bottom: 16px;
-    border-left: 4px solid #3949ab;
+    border-left: 4px solid #012169; /* Cor azul bandeira do Brasil*/
     padding-left: 12px;
 }
 .skills-list {
@@ -137,7 +139,7 @@ transition: 0.3s ease-in-out;
 }
 .skill-title {
     font-weight: bold;
-    color: #1a237e;
+    color: #012169; /* Cor azul bandeira do Brasil*/
     margin-bottom: 4px;
 }
 .skill-level {
@@ -157,14 +159,14 @@ transition: 0.3s ease-in-out;
 }
 
 .parceria h2 {
-    color: #0044cc;
+    color: #012169; /* Cor azul bandeira do Brasil*/
 }
 
 .parceria .btn-parceria {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #fdb203;
-    color: #1b3675;
+    background-color: #fedd00; /* Cor amarela bandeira do Brasil*/
+    color: #012169; /* Cor azul bandeira do Brasil*/
     /*background-color: #0044cc;
     color: white;*/
     font-weight: bold;
@@ -181,7 +183,7 @@ transition: 0.3s ease-in-out;
 }
 
 .parceria .btn-parceria:hover {
-    background-color: #003399;
+    background-color: #012169; /* Cor azul bandeira do Brasil*/
     color: #fff;
 }
 

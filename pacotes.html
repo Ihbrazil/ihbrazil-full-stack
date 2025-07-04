@@ -33,230 +33,259 @@
     <link rel="icon" href="./imagens/icones/favicon.ico" type="image/x-icon">
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./CSS/estilos.css">
+    <link rel="stylesheet" href="./CSS/responsivo_celular.css">
+    <link rel="stylesheet" href="./CSS/responsivo_tablet.css">
+    <link rel="stylesheet" href="./CSS/menu_sanduiche.css">
     <link rel="stylesheet" href="./CSS/estilo-pacotes.css">
     <!-- Page Title -->
     <title>Banners de Preço - 4 Designs Premium</title>
 </head>
 <body>
     <!-- Cabeçalho padrão -->
-    <header class="container_cabecalho">
-        <h1 class="titulo">ihbrazil Full Stack</h1>
-        <nav class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfólio</a>
-            <a href="skills.html">Skills</a>
-            <a href="blog.html">Blog</a>
-            <a href="pacotes.html">Pacotes</a>
-            <a href="contato.html">Fale Conosco</a>
+    <header class="topo">
+        <!-- Menu Sanduiche -->
+        <nav class="navbar">
+            <div class="container_logo">
+              <img src="./imagens/ihbrazilfullstack-logo.jpg" alt="logo ihbrazil Full Stack" title="logo ihbrazil Full Stack">
+              <p>ihbrazil Full Stack</p>
+            </div>
+            <div class="menu" id="menu">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="skills.html">Skills</a>
+                <a href="blog.html">Blog</a>
+                <a href="pacotes.html">Pacotes</a>
+                <a href="contato.html">Fale Conosco</a>
+            </div>
+            <div class="sanduiche" id="sanduiche" aria-label="Open menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+        <!-- Fim do menu Sanduiche -->
     </header>
 
-    <!-- Pacotes Section -->
-    <div class="container">
-        <div class="banner-implantacao">
-            <div class="plan-header">
-                <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-                <h2 class="plan-title">Plano de Implantação</h2>
+    <main>
+        <!-- Pacotes Section -->
+        <div class="container">
+            <div class="banner-implantacao">
+                <div class="plan-header">
+                    <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <h2 class="plan-title">Plano de Implantação</h2>
+                </div>
+                <p class="plan-subtitle">Cobrado uma única vez</p>
+                <div class="price-section">
+                    <div class="old-price">R$ 2449,90 /mês</div>
+                    <div class="current-price">R$ 1990,90</div>
+                </div>
+                <button class="cta-button">Contratar Implantação</button>
+                <div class="section-title">Benefícios</div>
+                <ul class="features">
+                    <li>Desenvolvimento Sites Institucionais</li>
+                    <li>Desenvolvimento de E-commerce</li>
+                    <li>Criação de Aplicações Web Personalizadas</li>
+                    <li>Criação de Landing Pages e Portais</li>
+                <div class="section-title">Suporte</div>    
+                    <li>Suporte técnico inicial para configuração</li>
+                    <li>Capacitação para gestão de tecnologia</li>
+                    <li>Suporte para integração com sistemas</li>
+                </ul>
+                <div class="section-title">Comece com Segurança</div>
+                <ul class="features">
+                    <li>Consultoria personalizada para tecnologia</li>
+                    <li>Configuração inicial de infraestrutura</li>
+                    <li>Treinamento para uso de ferramentas digitais</li>
+                    <li>Suporte técnico para dúvidas iniciais</li>
+                    <li>Treinamento para escalabilidade do projeto</li>
+                </ul>
             </div>
-            <p class="plan-subtitle">Cobrado uma única vez</p>
-            <div class="price-section">
-                <div class="old-price">R$ 2449,90 /mês</div>
-                <div class="current-price">R$ 1990,90</div>
+
+            <!-- Banner 1 - Cyber Neon Start -->
+            <div class="banner-1">
+                <div class="plan-header">
+                    <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h2 class="plan-title">Plano Start - Essencial</h2>
+                </div>
+                <p class="plan-subtitle">Cobrado mensalmente no cartão</p>
+
+                <div class="price-section">
+                    <div class="old-price">R$ 249,00 /mês</div>
+                    <div class="current-price">R$ 199,90 <span class="price-period">/mês</span></div>
+                </div>
+
+                <button class="cta-button">Saiba Mais</button>
+
+                <div class="section-title">Benefícios</div>
+                <ul class="features">
+                    <li>Publicação do site/landing page na internet</li>
+                    <li>Registro de domínio</li>
+                    <li>Configuração de domínio e hospedagem</li>
+                    <li>1 alteração ou evolução por mês</li>
+                    <li>Suporte humanizado 24 horas</li>
+                </ul>
+
+                <div class="section-title">Automação</div>
+                <ul class="features">
+                    <li>Automação de processos com IAs</li>
+                    <li>Desenvolvimento Web Responsivo</li>
+                    <li>Otimização de código e performance</li>
+                </ul>
+
+                <div class="section-title">Eficiência</div>
+                <ul class="features">
+                    <li>Integração com ferramentas de produtividade</li>
+                    <li>Automação de processos internos com APIs</li>
+                    <li>Monitoramento básico de desempenho</li>
+                </ul>
             </div>
-            <button class="cta-button">Contratar Implantação</button>
-            <div class="section-title">Benefícios</div>
-            <ul class="features">
-                <li>Desenvolvimento Sites Institucionais</li>
-                <li>Desenvolvimento de E-commerce</li>
-                <li>Criação de Aplicações Web Personalizadas</li>
-                <li>Criação de Landing Pages e Portais</li>
-            <div class="section-title">Suporte</div>    
-                <li>Suporte técnico inicial para configuração</li>
-                <li>Capacitação para gestão de tecnologia</li>
-                <li>Suporte para integração com sistemas</li>
-            </ul>
-            <div class="section-title">Comece com Segurança</div>
-            <ul class="features">
-                <li>Consultoria personalizada para tecnologia</li>
-                <li>Configuração inicial de infraestrutura</li>
-                <li>Treinamento para uso de ferramentas digitais</li>
-                <li>Suporte técnico para dúvidas iniciais</li>
-                <li>Treinamento para escalabilidade do projeto</li>
-            </ul>
+
+            <!-- Banner 2 - Electric Blue Start -->
+            <div class="banner-2">
+                <div class="plan-header">
+                    <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h2 class="plan-title">Plano Start - Avançado</h2>
+                </div>
+                <p class="plan-subtitle">Cobrado mensalmente no cartão</p>
+
+                <div class="price-section">
+                    <div class="old-price">R$ 349,00 /mês</div>
+                    <div class="current-price">R$ 299,90 <span class="price-period">/mês</span></div>
+                </div>
+
+                <button class="cta-button">Saiba Mais</button>
+
+                <div class="section-title">Benefícios do Plano Start - Essencial e mais</div>
+
+                <div class="section-title">Benefícios</div>
+                <ul class="features">
+                    <li>Integração com menu automático de WhatsApp</li>
+                    <li>Google meu negócio</li>
+                    <li>presença online local</li>
+                    <li>Configuração de e-mail profissional</li>
+                    <li>Suporte humanizado 24 horas</li>
+                </ul>
+
+                <div class="section-title">Automação</div>
+                <ul class="features">
+                    <li>Integração com APIs populares</li>
+                    <li>Monitoramento básico de analytics</li>
+                    <li><bold>Networking</bold> com desenvolvedores experientes</li>
+                </ul>
+
+                <div class="section-title">Eficiência</div>
+                <ul class="features">
+                    <li>Integração com redes sociais e serviços digitais</li>
+                    <li>Configuração de painel administrativo personalizado</li>
+                    <li>Suporte humanizado para dúvidas e ajustes</li>
+                </ul>
+            </div>
+
+            <!-- Banner 3 - Miami Vice Prime -->
+            <div class="banner-3">
+                <div class="plan-header">
+                    <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <h2 class="plan-title">Plano Prime - Standard</h2>
+                </div>
+                <p class="plan-subtitle">Cobrado mensalmente no cartão</p>
+
+                <div class="price-section">
+                    <div class="old-price">R$ 449,90 /mês</div>
+                    <div class="current-price">R$ 399,80 <span class="price-period">/mês</span></div>
+                </div>
+
+                <button class="cta-button">Saiba Mais</button>
+
+                <div class="section-title">Benefícios do Plano Start - Avançado e mais</div>
+
+                <div class="section-title">Mapeamento de comportamento do usuário</div>
+                <ul class="features">
+                    <li>Testes A/B para otimização</li>
+                    <li>Mapa de calor</li>
+                    <li>Medir tráfico do site</li>
+                    <li>Relatórios mensais de desempenho</li>
+                </ul>
+
+                <div class="section-title">Google Analytics e Marketing Digital</div>
+                <ul class="features">
+                    <li>Configuração avançada do Google Analytics</li>
+                    <li>Relatórios personalizados de marketing</li>
+                    <li>Estratégias de SEO e presença digital</li>
+                    <li>Campanhas de anúncios otimizadas</li>
+                </ul>
+
+                <div class="section-title">Conecte-se ao Mercado com Prime</div>
+                <ul class="features">
+                    <li>Suporte técnico especializado</li>
+                    <li>Relatórios e métricas de desempenho</li>
+                    <li>Estratégias para inovação contínua</li>
+                </ul>
+            </div>
+
+            <!-- Banner 4 - Dark Neon Prime -->
+            <div class="banner-4">
+                <div class="plan-header">
+                    <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <h2 class="plan-title">Plano Prime - Premium</h2>
+                </div>
+                <p class="plan-subtitle">Cobrado mensalmente no cartão</p>
+
+                <div class="price-section">
+                    <div class="old-price">R$ 1449,90 /mês</div>
+                    <div class="current-price">R$ 999,80 <span class="price-period">/mês</span></div>
+                </div>
+
+                <button class="cta-button">Saiba Mais</button>
+
+                <div class="section-title">Benefícios do Plano Prime - Standard e mais</div>
+
+                <div class="section-title">Benefícios</div>
+                <ul class="features">
+                    <li>captação de leads - Aprenda a captar clientes</li>
+                    <li>envio de newsletter</li>
+                    <li>sistema de gestão de leads</li>
+                    <li>configuração de servidores e bancos de dados</li>
+                    <li>Otimização de performance e segurança</li>
+                </ul>
+
+                <div class="section-title">Infraestrutura Tecnológica</div>
+                <ul class="features">
+                    <li>Gerenciamento de banco de dados e servidores</li>
+                    <li>Implementação de segurança avançada</li>
+                    <li>Escalabilidade para projetos de alto tráfego</li>
+                </ul>
+
+                <div class="section-title">Desenvolvimento Full Stack</div>
+                <ul class="features">
+                    <li>Criação de sistemas personalizados</li>
+                    <li>Desenvolvimento de APIs e integração com plataformas externas</li>
+                    <li>Otimização de código para alta performance</li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Banner 1 - Cyber Neon Start -->
-        <div class="banner-1">
-            <div class="plan-header">
-                <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <h2 class="plan-title">Plano Start - Essencial</h2>
-            </div>
-            <p class="plan-subtitle">Cobrado mensalmente no cartão</p>
-
-            <div class="price-section">
-                <div class="old-price">R$ 249,00 /mês</div>
-                <div class="current-price">R$ 199,90 <span class="price-period">/mês</span></div>
-            </div>
-
-            <button class="cta-button">Saiba Mais</button>
-
-            <div class="section-title">Benefícios</div>
-            <ul class="features">
-                <li>Publicação do site/landing page na internet</li>
-                <li>Registro de domínio</li>
-                <li>Configuração de domínio e hospedagem</li>
-                <li>1 alteração ou evolução por mês</li>
-                <li>Suporte humanizado 24 horas</li>
-            </ul>
-
-            <div class="section-title">Automação</div>
-            <ul class="features">
-                <li>Automação de processos com IAs</li>
-                <li>Desenvolvimento Web Responsivo</li>
-                <li>Otimização de código e performance</li>
-            </ul>
-
-            <div class="section-title">Eficiência</div>
-            <ul class="features">
-                <li>Integração com ferramentas de produtividade</li>
-                <li>Automação de processos internos com APIs</li>
-                <li>Monitoramento básico de desempenho</li>
-            </ul>
-        </div>
-
-        <!-- Banner 2 - Electric Blue Start -->
-        <div class="banner-2">
-            <div class="plan-header">
-                <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <h2 class="plan-title">Plano Start - Avançado</h2>
-            </div>
-            <p class="plan-subtitle">Cobrado mensalmente no cartão</p>
-
-            <div class="price-section">
-                <div class="old-price">R$ 349,00 /mês</div>
-                <div class="current-price">R$ 299,90 <span class="price-period">/mês</span></div>
-            </div>
-
-            <button class="cta-button">Saiba Mais</button>
-
-            <div class="section-title">Benefícios do Plano Start - Essencial e mais</div>
-
-            <div class="section-title">Benefícios</div>
-            <ul class="features">
-                <li>Integração com menu automático de WhatsApp</li>
-                <li>Google meu negócio</li>
-                <li>presença online local</li>
-                <li>Configuração de e-mail profissional</li>
-                <li>Suporte humanizado 24 horas</li>
-            </ul>
-
-            <div class="section-title">Automação</div>
-            <ul class="features">
-                <li>Integração com APIs populares</li>
-                <li>Monitoramento básico de analytics</li>
-                <li><bold>Networking</bold> com desenvolvedores experientes</li>
-            </ul>
-
-            <div class="section-title">Eficiência</div>
-            <ul class="features">
-                <li>Integração com redes sociais e serviços digitais</li>
-                <li>Configuração de painel administrativo personalizado</li>
-                <li>Suporte humanizado para dúvidas e ajustes</li>
-            </ul>
-        </div>
-
-        <!-- Banner 3 - Miami Vice Prime -->
-        <div class="banner-3">
-            <div class="plan-header">
-                <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-                <h2 class="plan-title">Plano Prime - Standard</h2>
-            </div>
-            <p class="plan-subtitle">Cobrado mensalmente no cartão</p>
-
-            <div class="price-section">
-                <div class="old-price">R$ 449,90 /mês</div>
-                <div class="current-price">R$ 399,80 <span class="price-period">/mês</span></div>
-            </div>
-
-            <button class="cta-button">Saiba Mais</button>
-
-            <div class="section-title">Benefícios do Plano Start - Avançado e mais</div>
-
-            <div class="section-title">Mapeamento de comportamento do usuário</div>
-            <ul class="features">
-                <li>Testes A/B para otimização</li>
-                <li>Mapa de calor</li>
-                <li>Medir tráfico do site</li>
-                <li>Relatórios mensais de desempenho</li>
-            </ul>
-
-            <div class="section-title">Google Analytics e Marketing Digital</div>
-            <ul class="features">
-                <li>Configuração avançada do Google Analytics</li>
-                <li>Relatórios personalizados de marketing</li>
-                <li>Estratégias de SEO e presença digital</li>
-                <li>Campanhas de anúncios otimizadas</li>
-            </ul>
-
-            <div class="section-title">Conecte-se ao Mercado com Prime</div>
-            <ul class="features">
-                <li>Suporte técnico especializado</li>
-                <li>Relatórios e métricas de desempenho</li>
-                <li>Estratégias para inovação contínua</li>
-            </ul>
-        </div>
-
-        <!-- Banner 4 - Dark Neon Prime -->
-        <div class="banner-4">
-            <div class="plan-header">
-                <svg class="plan-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-                <h2 class="plan-title">Plano Prime - Premium</h2>
-            </div>
-            <p class="plan-subtitle">Cobrado mensalmente no cartão</p>
-
-            <div class="price-section">
-                <div class="old-price">R$ 1449,90 /mês</div>
-                <div class="current-price">R$ 999,80 <span class="price-period">/mês</span></div>
-            </div>
-
-            <button class="cta-button">Saiba Mais</button>
-
-            <div class="section-title">Benefícios do Plano Prime - Standard e mais</div>
-
-            <div class="section-title">Benefícios</div>
-            <ul class="features">
-                <li>captação de leads - Aprenda a captar clientes</li>
-                <li>envio de newsletter</li>
-                <li>sistema de gestão de leads</li>
-                <li>configuração de servidores e bancos de dados</li>
-                <li>Otimização de performance e segurança</li>
-            </ul>
-
-            <div class="section-title">Infraestrutura Tecnológica</div>
-            <ul class="features">
-                <li>Gerenciamento de banco de dados e servidores</li>
-                <li>Implementação de segurança avançada</li>
-                <li>Escalabilidade para projetos de alto tráfego</li>
-            </ul>
-
-            <div class="section-title">Desenvolvimento Full Stack</div>
-            <ul class="features">
-                <li>Criação de sistemas personalizados</li>
-                <li>Desenvolvimento de APIs e integração com plataformas externas</li>
-                <li>Otimização de código para alta performance</li>
-            </ul>
-            
-            <!-- Networking e Inovação
+    </main>
+    <!-- Footer -->
+     <footer class="footer">
+        <p>
+        © 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.
+        <a href="https://www.devmedia.com.br/join/?member=isaias-36&ebook=manual" target="_blank">Seja um Programador DevMedia</a>
+        </p>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/menuSaduiche.js"></script>
+</body>
+</html>
+<!-- Networking e Inovação
             <div class="section-title">Tecnologias de Alto Nível</div>
             <ul class="features">
                 <li>Soluções avançadas em Cloud Computing</li>
@@ -278,14 +307,3 @@
                 <li>Eventos e encontros com especialistas</li>
             </ul>
             -->
-        </div>
-    </div>
-    <!-- Footer -->
-     <footer class="footer">
-    <p>
-      © 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.
-      <a href="https://www.devmedia.com.br/join/?member=isaias-36&ebook=manual" target="_blank">Seja um Programador DevMedia</a>
-    </p>
-  </footer>
-</body>
-</html>

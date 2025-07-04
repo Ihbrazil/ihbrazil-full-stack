@@ -1,95 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async src="https://www.googletagmanager.com/gtag/js?id=G-8DPD3RJVDW">
-  </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DPD3RJVDW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-8DPD3RJVDW');
   </script>
-  <!-- Google tag (gtag.js) -->
 
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <meta 
-    name="description" 
-    content="Desenvolvimento Full Stack de alto nível! A ihbrazil Full Stack cria soluções digitais completas, do front-end ao back-end, garantindo inovação, automação e eficiência para sua empresa. Descubra agora!"
-  >
-  <meta
-    name="keywords"
-    content="Desenvolvimento Web, Full Stack, Tecnologia, Automação, Chatbots, Marketing Digital, Programação, Software, Front-end, Back-end, Inovação"
-  >
-  <meta
-    name="author"
-    content="ihbrazil Full Stack Developer">
-  <link rel="icon" href="./imagens/icones/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./CSS/estilos.css">
-  <link rel="stylesheet" href="./CSS/estilo-blog.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Confira os artigos do blog da ihbrazil Full Stack sobre tecnologia, desenvolvimento, inovação e tendências digitais." />
+  <meta name="keywords" content="Blog Tecnologia, Full Stack, Desenvolvimento Web, Inovação, Tendências Digitais" />
+  <meta name="author" content="ihbrazil Full Stack Developer" />
   <title>Blog | ihbrazil Full Stack</title>
+  
+  <link rel="icon" href="./imagens/icones/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./CSS/estilos.css" />
+  <link rel="stylesheet" href="./CSS/responsivo_celular.css" />
+  <link rel="stylesheet" href="./CSS/responsivo_tablet.css" />
+  <link rel="stylesheet" href="./CSS/menu_sanduiche.css" />
+  <link rel="stylesheet" href="./CSS/estilo-blog.css" />
 </head>
+
 <body>
-    <!-- Cabeçalho padrão -->
-    <header class="container_cabecalho">
-        <h1 class="titulo">ihbrazil Full Stack</h1>
-        <nav class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfólio</a>
-            <a href="skills.html">Skills</a>
-            <a href="blog.html">Blog</a>
-            <a href="pacotes.html">Pacotes</a>
-            <a href="contato.html">Fale Conosco</a>
-        </nav>
-    </header>
-
-    <main>
-      <!-- Seção principal do blog -->
-      <div class="container">
-          <div class="blog-list">
-              <article class="blog-post">
-                  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Desenvolvimento Web">
-                  <div class="blog-content">
-                      <div class="blog-meta">10 de Junho de 2024 • ihbrazil Team</div>
-                      <h2>Como criar aplicações web modernas com Full Stack</h2>
-                      <p>Descubra as melhores práticas e ferramentas para desenvolver aplicações web robustas, escaláveis e seguras utilizando o stack completo.</p>
-                      <a href="#" class="read-more">Leia mais</a>
-                  </div>
-              </article>
-              <article class="blog-post">
-                  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Tendências em Tecnologia">
-                  <div class="blog-content">
-                      <div class="blog-meta">2 de Junho de 2024 • ihbrazil Team</div>
-                      <h2>Tendências em tecnologia para 2024</h2>
-                      <p>Fique por dentro das principais tendências tecnológicas que vão impactar o mercado digital e o desenvolvimento de software neste ano.</p>
-                      <a href="#" class="read-more">Leia mais</a>
-                  </div>
-              </article>
-              <article class="blog-post">
-                  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Inovação Digital">
-                  <div class="blog-content">
-                      <div class="blog-meta">25 de Maio de 2024 • ihbrazil Team</div>
-                      <h2>Inovação digital: como transformar seu negócio</h2>
-                      <p>Veja como a inovação digital pode impulsionar o crescimento da sua empresa e garantir competitividade no mercado atual.</p>
-                      <a href="#" class="read-more">Leia mais</a>
-                  </div>
-              </article>
-          </div>
+  <header class="topo">
+    <nav class="navbar">
+      <div class="container_logo">
+        <img src="./imagens/ihbrazilfullstack-logo.jpg" alt="logo ihbrazil Full Stack" title="logo ihbrazil Full Stack" />
+        <p>ihbrazil Full Stack</p>
       </div>
-    </main>
 
-    <!-- Rodapé -->
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="pacotes.html">Pacotes</a>
+        <a href="contato.html">Fale Conosco</a>
+      </div>
+
+      <button class="sanduiche" id="sanduiche" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <section class="container blog-list">
+      <article class="blog-post">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Desenvolvimento Web" />
+        <div class="blog-content">
+          <div class="blog-meta">10 de Junho de 2024 • ihbrazil Team</div>
+          <h2>Como criar aplicações web modernas com Full Stack</h2>
+          <p>Descubra as melhores práticas e ferramentas para desenvolver aplicações web robustas, escaláveis e seguras utilizando o stack completo.</p>
+          <a href="#" class="read-more">Leia mais</a>
+        </div>
+      </article>
+
+      <article class="blog-post">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Tendências em Tecnologia" />
+        <div class="blog-content">
+          <div class="blog-meta">2 de Junho de 2024 • ihbrazil Team</div>
+          <h2>Tendências em tecnologia para 2024</h2>
+          <p>Fique por dentro das principais tendências tecnológicas que vão impactar o mercado digital e o desenvolvimento de software neste ano.</p>
+          <a href="#" class="read-more">Leia mais</a>
+        </div>
+      </article>
+
+      <article class="blog-post">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Inovação Digital" />
+        <div class="blog-content">
+          <div class="blog-meta">25 de Maio de 2024 • ihbrazil Team</div>
+          <h2>Inovação digital: como transformar seu negócio</h2>
+          <p>Veja como a inovação digital pode impulsionar o crescimento da sua empresa e garantir competitividade no mercado atual.</p>
+          <a href="#" class="read-more">Leia mais</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
   <footer class="footer">
     <p>
-      © 2025 ihbrazil Full Stack - Transformando ideias em realidade digital.
-      <a href="https://www.devmedia.com.br/join/?member=isaias-36&ebook=manual" target="_blank">Seja um Programador DevMedia</a>
+      © 2025 ihbrazil Full Stack — Transformando ideias em realidade digital.
+      <a href="https://www.devmedia.com.br/join/?member=isaias-36&ebook=manual" target="_blank" rel="noopener noreferrer">Seja um Programador DevMedia</a>
     </p>
   </footer>
+
+  <script src="./js/menuSaduiche.js"></script>
 </body>
 </html>

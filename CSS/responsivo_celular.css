@@ -1,0 +1,286 @@
+/* Configuração para dispositivos móveis (tela pequena) */
+@media only screen and (max-width: 600px) {
+    /* Topo da página */
+    .topo {
+      padding: 10px 5px; /* Reduz o espaçamento interno */
+      border-bottom: 1px solid #fedd00; /* Cor amarela bandeira do Brasil*/; /* Diminui a espessura da borda */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
+    }
+  
+    .container_logo {
+      flex-direction: row; /* Alinha os elementos em coluna */
+      padding: 10px; /* Reduz o padding */
+    }
+  
+    .container_logo img {
+      width: 20px; /* Reduz o tamanho da imagem */
+      height: 20px;
+      margin-bottom: 5px; /* Adiciona espaçamento inferior */
+    }
+  
+    .container_logo p {
+      font-size: 18px; /* Reduz o tamanho da fonte */
+      text-align: center; /* Centraliza o texto */
+    }
+  
+    .links {
+      font-size: 14px; /* Reduz o tamanho da fonte dos links */
+      padding: 5px; /* Adiciona espaçamento interno */
+    }
+  
+    .container_img_divulgacao img {
+      max-width: 90%; /* Limita o tamanho da imagem no topo */
+      height: auto; /* Mantém a proporção da imagem */
+    }
+  
+    /* Seção apresentação da página */
+    .secao_apresentacao {
+      padding: 100px 10px 50px; /* Reduz o espaçamento interno */
+      gap: 20px; /* Diminui o espaço entre os elementos */
+    }
+  
+    .container_texto_apresentacao {
+      max-width: 100%; /* Garante que ocupe toda a largura da tela */
+      padding: 0 10px; /* Adiciona espaçamento lateral interno */
+    }
+  
+    .container_texto_apresentacao h1 {
+      font-size: 24px; /* Reduz o tamanho da fonte para títulos */
+      letter-spacing: 1.5px; /* Ajusta o espaçamento entre letras */
+      margin-bottom: 15px; /* Diminui o espaçamento inferior */
+      text-align: center; /* Centraliza o texto */
+    }
+  
+    .container_texto_apresentacao p {
+      font-size: 16px; /* Texto menor para melhor adaptação */
+      line-height: 1.4em; /* Ajusta o espaçamento entre as linhas */
+      padding: 0 10px; /* Adiciona espaçamento lateral interno */
+      text-align: center; /* Centraliza o texto */
+    }
+  
+    .lista_servicos {
+      flex-direction: column; /* Reorganiza itens em uma única coluna */
+      gap: 15px; /* Diminui o espaçamento entre os itens */
+    }
+  
+    .lista_servicos li {
+      flex: 1 1 100%; /* Faz cada item ocupar toda a largura */
+      padding: 10px; /* Reduz o espaçamento interno */
+      justify-content: flex-start; /* Alinha os itens à esquerda */
+    }
+  
+    .lista_servicos li img {
+      margin-right: 8px; /* Reduz a distância entre o ícone e o texto */
+      width: 20px; /* Reduz o tamanho do ícone */
+      height: 20px;
+    }
+  
+    .lista_servicos li p {
+      font-size: 14px; /* Fonte menor para se adaptar ao espaço */
+    }
+  
+    .container_img_guia {
+      max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
+  
+    .container_img_guia img {
+      border-radius: 8px; /* Adiciona bordas arredondadas */
+      width: 100%; /* Mantém proporção da imagem */
+      height: auto; /* Ajusta altura automaticamente */
+    }
+  
+    /* Seção beneficios */
+    .secao_beneficios {
+      padding: 30px 10px; /* Reduz o padding para caber melhor na tela */
+      gap: 20px; /* Menor espaçamento entre os elementos */
+    }
+  
+    .secao_beneficios div h2 {
+      font-size: 20px; /* Reduz o tamanho do título */
+      margin-bottom: 15px; /* Diminui o espaçamento abaixo do título */
+      text-align: center; /* Centraliza o texto para melhorar o layout */
+    }
+  
+    .lista_beneficios {
+      flex-direction: column; /* Alinha os itens em uma única coluna */
+      gap: 15px; /* Reduz o espaçamento entre os itens */
+      width: 100%; /* Garante que ocupe toda a largura disponível */
+    }
+  
+    .lista_beneficios li {
+      flex: 1 1 100%; /* Cada item ocupa a largura total */
+      padding: 10px; /* Espaçamento interno ajustado */
+      font-size: 14px; /* Reduz o tamanho da fonte */
+      text-align: left; /* Mantém o alinhamento à esquerda */
+    }
+  
+    /* Seção destinos */
+    .secao_destinos {
+      padding: 30px 10px; /* Reduz o espaçamento interno */
+      gap: 20px; /* Reduz o espaço entre os elementos */
+    }
+  
+    .container_destinos {
+      flex-direction: column; /* Alinha os cartões em coluna */
+      gap: 20px; /* Menor espaçamento entre os cartões */
+    }
+  
+    .card_destinos {
+      flex: 1 1 100%; /* Cada cartão ocupa toda a largura */
+      border: 1px solid gainsboro;
+      padding: 10px; /* Adiciona padding para melhor espaçamento */
+    }
+  
+    .card_destinos h3 {
+      font-size: 18px; /* Reduz o tamanho do título */
+      padding: 10px 0px; /* Menor espaçamento */
+    }
+  
+    .card_destinos img {
+      width: 100%; /* Garante que a imagem preencha o cartão */
+      height: auto; /* Mantém a proporção da imagem */
+      border-radius: 5px; /* Adiciona cantos arredondados */
+    }
+  
+    .card_destinos p {
+      font-size: 14px; /* Fonte menor para melhor legibilidade */
+      line-height: 20px; /* Ajusta o espaçamento entre linhas */
+      padding: 0px 10px 10px; /* Reduz o espaçamento interno */
+    }
+  
+    .moldura {
+      height: auto; /* Ajusta a altura automaticamente */
+      padding: 10px; /* Reduz o padding interno */
+    }
+  
+    .subtitulo {
+      font-size: 18px; /* Reduz o tamanho da fonte do subtítulo */
+      padding: 10px 0px; /* Menor espaçamento inferior */
+    }
+  
+    .info {
+      font-size: 14px; /* Reduz o tamanho do texto */
+      line-height: 20px; /* Ajusta o espaçamento entre linhas */
+      padding: 0px 10px 10px; /* Menor espaçamento interno */
+    }
+  
+    /* Seção de contatos */
+    .secao_informacoes {
+      padding: 30px 10px; /* Reduz o padding para caber melhor na tela */
+      gap: 20px; /* Reduz o espaçamento entre os elementos */
+    }
+  
+    .container_informacoes {
+      flex-direction: column; /* Alinha os elementos em coluna */
+      align-items: center; /* Centraliza os elementos */
+      gap: 20px; /* Espaçamento menor entre os itens */
+      width: 100%; /* Garante que ocupe toda a largura */
+    }
+  
+    .lista_horarios {
+      margin-top: 20px; /* Reduz a margem superior */
+      line-height: 25px; /* Ajusta o espaçamento entre as linhas */
+      font-size: 12px; /* Tamanho menor para melhor ajuste */
+    }
+  
+    .agenda {
+      line-height: 18px; /* Reduz o espaçamento entre as linhas */
+      padding: 0 10px; /* Adiciona espaçamento interno */
+    }
+  
+    .agenda p {
+      margin-top: 8px; /* Reduz o espaçamento superior */
+      font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+  
+    .agenda_telefones {
+      gap: 10px; /* Menor espaçamento entre os itens */
+      margin-top: 20px; /* Ajuste na margem superior */
+    }
+  
+    .agenda_telefones li {
+      flex-direction: row; /* Alinha os itens verticalmente */
+      text-align: center; /* Centraliza o conteúdo */
+      align-items: center;
+    }
+
+    .agenda_telefones li a {
+      font-size: 16px; /* Reduz o tamanho da fonte para melhor encaixe */
+      padding: 1%;
+      align-items: center;
+    }
+
+    .icone_whatsapp {
+      width: 25px;
+      height: 25px; /* Ajusta o tamanho para telas menores */
+    }
+  
+    .card {
+      flex-direction: column; /* Alinha os itens em coluna */
+      align-items: center; /* Centraliza os elementos */
+    }
+  
+    .card figure {
+      width: 60px; /* Reduz o tamanho da figura */
+      height: 60px;
+    }
+  
+    .card div {
+      font-size: 12px; /* Reduz o tamanho da fonte */
+      text-align: center; /* Centraliza o texto */
+    }
+  
+    /* Seção Redes Sociais */
+      .secao_redes_sociais {
+        background-color: #b20678;
+        padding: 60px 10px 40px; /* Reduz o padding para ocupar menos espaço */
+        gap: 20px; /* Diminui o espaço entre os elementos */
+      }
+    
+      .container_texto_redes_sociais {
+        max-width: 100%; /* Garante que ocupe toda a largura da tela */
+        padding: 0 10px; /* Adiciona um padding interno para evitar que o texto encoste nas bordas */
+      }
+    
+      .container_texto_redes_sociais h1 {
+        font-size: 22px; /* Reduz o tamanho da fonte para cabeçalhos */
+        letter-spacing: 1.5px; /* Ajusta o espaçamento entre as letras */
+        margin-bottom: 15px; /* Menor espaço abaixo */
+      }
+    
+      .container_texto_redes_sociais span {
+        font-size: 18px; /* Ajusta o tamanho do texto em destaque */
+        font-weight: 600; /* Torna o texto levemente mais visível */
+      }
+    
+      .secao_redes_sociais p {
+        font-size: 16px; /* Texto menor para telas pequenas */
+        line-height: 1.4em; /* Ajusta o espaçamento entre linhas */
+        padding: 0 10px; /* Adiciona espaçamento interno */
+      }
+    
+    /* Seção localização */  
+    .secao_localizacao {
+      margin-top: 5%; /* Reduz a margem superior */
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Reduz o espaçamento entre os elementos */
+      padding: 10px; /* Adiciona um padding interno */
+    }
+  
+    .secao_localizacao div {
+      padding: 0 10px; /* Reduz o preenchimento lateral */
+    }
+  
+    .secao_localizacao div h2 {
+      font-size: 20px; /* Reduz o tamanho da fonte para títulos */
+      line-height: 30px; /* Ajusta o espaçamento entre linhas */
+      padding-bottom: 10px; /* Reduz o espaço inferior */
+    }
+  
+    .secao_localizacao iframe {
+      width: 100%; /* Garante que o mapa ocupe toda a largura da tela */
+      height: 250px; /* Altura ajustada para telas pequenas */
+      border-radius: 5px; /* Bordas levemente arredondadas */
+    }
+  }

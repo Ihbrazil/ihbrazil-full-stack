@@ -63,7 +63,7 @@
 }
 
 /* Responsividade para telas menores */
-@media (max-width: 600px) {
+@media (max-width: 845px) {
   .navbar .menu {
     display: none;
     flex-direction: column;
@@ -91,32 +91,29 @@
 }
 
 /* =======================
-   TABLETS – 601px a 1024px
+   TABLETS – 846px a 1024px
 ======================= */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 846px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0.75rem 1.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .navbar .logo {
+    font-size: 1.4rem;
+  }
+
   .navbar .menu {
-    display: none;
-    flex-direction: column;
-    background: #012169;
-    position: absolute;
-    top: 100%;
-    right: 1rem;
-    width: 180px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    border-radius: 0 0 8px 8px;
-    padding: 0.5rem 0;
+    gap: 0.75rem;
   }
 
   .navbar .menu a {
-    padding: 0.75rem 1rem;
-  }
-
-  .navbar .menu.active {
-    display: flex;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.6rem;
   }
 
   .navbar .sanduiche {
-    display: flex;
+    display: none;
   }
 }
 

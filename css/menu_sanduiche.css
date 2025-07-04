@@ -62,7 +62,81 @@
   transition: all 0.3s ease;
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 300px) {
+  body {
+    font-size: 14px;
+    padding: 0 6px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1.5rem;
+    gap: 12px; /* Espaço entre a logo e o botão */
+  }
+
+  .container_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar .sanduiche {
+    display: flex;
+    align-self: center; /* Alinha o botão à direita */
+  }
+
+ .navbar .menu {
+    display: none; /* escondido por padrão */
+    flex-direction: column;
+    width: 100%;
+    background: #012169;
+    border-radius: 0 0 8px 8px;
+    padding: 0.5rem 1rem;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .navbar .logo {
+    font-size: 1.1rem;
+  }
+
+  .navbar .menu a {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .navbar .sanduiche {
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+  }
+
+  .navbar .sanduiche span {
+    width: 18px;
+    height: 2px;
+  }
+
+  .skills-list,
+  .skill-card,
+  .education-card,
+  .btn-parceria {
+    width: 100% !important;
+    font-size: 14px;
+  }
+
+  .btn-parceria {
+    padding: 8px 10px;
+  }
+
+  .parceria p {
+    font-size: 13px;
+  }
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
   .navbar .menu {
     display: none;
     flex-direction: column;
@@ -86,5 +160,75 @@
 
   .navbar .sanduiche {
     display: flex;
+  }
+}
+
+/* Responsividade para tablets e desktops */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0.75rem 1.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .navbar .logo {
+    font-size: 1.4rem;
+  }
+
+  .navbar .menu {
+    gap: 0.75rem;
+  }
+
+  .navbar .menu a {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .navbar .sanduiche {
+    display: none;
+  }
+}
+
+/* Responsividade para telas grandes */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .navbar {
+    padding: 1rem 2.5rem;
+  }
+
+  .navbar .logo {
+    font-size: 1.6rem;
+  }
+
+  .navbar .menu a {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .navbar .sanduiche {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+  .navbar .menu {
+    gap: 1.5rem;
+  }
+
+  .navbar .menu a {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.2rem;
+  }
+
+  .navbar .sanduiche {
+    display: none;
   }
 }

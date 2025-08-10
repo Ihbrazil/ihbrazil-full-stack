@@ -59,74 +59,92 @@
 
     <main style="padding-top: 120px;">
         <!-- Seção de introdução -->
-        <section class="main-section">
-        <div class="contato-text">
-            <h1>Fale Conosco</h1>
-            <p>Entre em contato com a nossa equipe. Teremos o maior prazer em ajudar!</p>
-        </div>
+        <section class="container-hero">
+            <div id="formulario-de-projeto" >
+                <div class="hero-section">
+                <h2 class="hero-title">Transforme sua ideia em realidade digital</h2>
+                <p class="hero-subtitle">Conte-nos sobre seu projeto e receba uma proposta personalizada</p>
+            </div>
         </section>
 
-        <!-- Depoimentos -->
-        <section class="depoimentos-section">
-        <h2>O que dizem sobre nós</h2>
-        <div class="depoimentos-carousel">
-            <div class="depoimento">
-            <img src="./imagens/maria.png" alt="Maria Fernanda" />
-            <p>"A ihbrazil Full Stack modernizou nossa comunicação e marketing no turismo com tecnologia eficiente. A automação otimizou a experiência dos clientes. Recomendo!!"</p>
-            <span><strong>– Maria Fernanda</strong><br />Guia de Turismo Nacional e Internacional</span>
+        <!-- Formulário de Projeto -->
+        <section class="container-formulario">
+        <div class="form-container">
+            <form id="leadForm" class="lead-form">
+            <div class="form-group">
+                <label for="nome" class="form-label">Nome completo</label>
+                <input 
+                    type="text" 
+                    id="nome" 
+                    name="nome" 
+                    class="form-input" 
+                    placeholder="Digite seu nome completo"
+                    required
+                >
+                <div class="error-message" id="nome-error"></div>
             </div>
-            <div class="depoimento">
-            <img src="./imagens/rosania.png" alt="Rosania" />
-            <p>"A ihbrazil Full Stack transformou nossa presença digital com um site moderno e automatizou nosso atendimento via WhatsApp. Revolucionou nossa comunicação!"</p>
-            <span><strong>– Rosania (Rô)</strong><br />Agência Rô Turismo e Eventos</span>
-            </div>
-            <div class="depoimento">
-            <img src="./imagens/img-2.png" alt="Cliente C" />
-            <p>"Nos ajudaram a transformar nossa ideia em um site incrível! Atendimento e qualidade impecáveis. Recomendo fortemente!"</p>
-            <span><strong>– Agência Rô Turismo e Eventos</strong></span>
-            </div>
-        </div>
-        </section>
 
-        <!-- Botões -->
-        <section class="cta-section">
-        <div class="cta-buttons">
-            <button onclick="document.getElementById('formulario-de-projeto').style.display='block'">
-            Inicie seu projeto
+            <div class="form-group">
+                <label for="email" class="form-label">E-mail</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="seu@email.com"
+                    required
+                >
+                <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo_de_projeto" class="form-label">Tipo de projeto</label>
+                <select 
+                    id="tipo_de_projeto" 
+                    name="tipo_de_projeto" 
+                    class="form-select" 
+                    required
+                >
+                    <option value="">Selecione o tipo de projeto</option>
+                    <option value="Site Institucional">Site Institucional</option>
+                    <option value="E-commerce">E-commerce</option>
+                    <option value="Aplicação Web">Aplicação Web</option>
+                </select>
+                <div class="error-message" id="tipo_de_projeto-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="detalhes_adicionais" class="form-label">Detalhes adicionais</label>
+                <textarea 
+                    id="detalhes_adicionais" 
+                    name="detalhes_adicionais" 
+                    class="form-textarea" 
+                    placeholder="Descreva seu projeto, funcionalidades desejadas, prazo, orçamento ou qualquer informação relevante..."
+                    rows="5"
+                    required
+                ></textarea>
+                <div class="error-message" id="detalhes_adicionais-error"></div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-text">Enviar Projeto</span>
+                <div class="loading-spinner" id="loadingSpinner"></div>
             </button>
-            <button onclick="window.open('https://api.whatsapp.com/send?phone=+5532991538912&text=Olá, gostaria de saber mais sobre os serviços oferecidos pela ihbrazil Agência Full Stack.', '_blank', 'noopener,noreferrer')">
-            Fale pelo nosso WhatsApp
-            </button>
-        </div>
-        </section>
-
-        <!-- Formulário -->
-        <section>
-        <div id="formulario-de-projeto" class="container-formulario">
-            <h2>Conte-nos sobre seu projeto</h2>
-            <form action="mailto:ihbrazil@gmail.com" method="post" enctype="text/plain">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="name" required />
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="tipo-de-projeto">Tipo de projeto:</label>
-            <select id="tipo-de-projeto" name="project-type" required>
-                <option value="site">Site Institucional</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="web-app">Aplicação Web</option>
-            </select>
-
-            <label for="detalhes">Detalhes adicionais:</label>
-            <textarea id="detalhes" name="details" rows="4" placeholder="Exemplo: funcionalidades desejadas, estilo visual..."></textarea>
-
-            <div class="cta-buttons">
-                <button type="submit">Enviar</button>
-                <button type="button" onclick="document.getElementById('formulario-de-projeto').style.display='none'">Cancelar</button>
-            </div>
             </form>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h3>Projeto enviado com sucesso!</h3>
+                <p>Recebemos suas informações e entraremos em contato em breve.</p>
+            </div>
+
+            <div class="error-alert" id="errorAlert">
+                <div class="error-icon">!</div>
+                <h3>Erro ao enviar projeto</h3>
+                <p id="errorMessage">Ocorreu um erro inesperado. Tente novamente.</p>
+            </div>
         </div>
+        
         </section>
     </main>
 
@@ -137,22 +155,10 @@
         </p>
     </footer>
 
-    <!-- Depoimentos automáticos -->
-    <script>
-        const depoimentos = document.querySelectorAll('.depoimento');
-        let index = 0;
-
-        function trocarDepoimento() {
-        depoimentos.forEach((depoimento, i) => {
-            depoimento.style.display = i === index ? 'block' : 'none';
-        });
-        index = (index + 1) % depoimentos.length;
-        }
-
-        setInterval(trocarDepoimento, 4000);
-        window.addEventListener('load', trocarDepoimento);
-    </script>
     <!-- Scripts -->
+    <!-- Cadastro de Leads -->
+    <script src="js/cadastraLeads.js"></script>
+    <!-- Menu Sanduiche -->
     <script src="js/menuSanduiche.js"></script>
 </body>
 </html>

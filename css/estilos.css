@@ -156,7 +156,7 @@ main {
   margin: 20px 0;
 }
 
-.cta-buttons button {
+.cta-buttons button{
   padding: 12px 30px;
   font-size: 18px;
   border: none;
@@ -180,7 +180,6 @@ main {
    FORMULÁRIO
 ================================ */
 .container-formulario {
-  display: none;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -302,4 +301,60 @@ footer {
     font-size: 16px;
     padding: 10px;
   }
+}
+
+/* ================================
+   DEPOIMENTOS
+================================ */
+.depoimentos-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.depoimentos-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #012169;
+}
+
+.depoimentos-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.depoimento {
+  background: #f9f9f9;
+  border-left: 6px solid #fedd00;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  position: relative;
+  display: none; /* controlado via JS */
+}
+
+.depoimento img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 0 4px #00973920;
+}
+
+.depoimento p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.depoimento span {
+  font-size: 0.85rem;
+  color: #555;
 }

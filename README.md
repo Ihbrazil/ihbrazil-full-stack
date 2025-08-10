@@ -1,5 +1,5 @@
 # ihbrazil-full-stack
- Agência de Tecnologia ou Gestor de Tecnologia de Programação fornecedora para pequenos e médios negócios. que tem como objetivo a entrega de sites, aplicativos, automações, sistemas back office e sistemas de gestão para seus clientes.
+ Agência de Tecnologia de Programação ou Gestor de Tecnologia para pequenos e médios negócios. que tem como objetivo a entrega de sites, aplicativos, automações, sistemas back office e sistemas de gestão para seus clientes.
 
 1) Indique por favor a sua visão sobre como ganhar dinheiro com o conhecimento em tecnologia, sem necessariamente depender de um contrato CLT.
 

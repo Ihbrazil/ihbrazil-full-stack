@@ -1,7 +1,7 @@
 // Configuração da API do Supabase
 const SUPABASE_CONFIG = {
-    endpoint: 'https://zwvisfrdzizehayydrcg.supabase.co/rest/v1/ihb_fs_captura_leads',
-    apiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp3dmlzZnJkeml6ZWhheXlkcmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI3NjQ0MjAsImV4cCI6MjA2ODM0MDQyMH0.ctL6jvT0VUsYUF-VZ0i1W449ZX5xDSQBBVHCGmQpckI'
+    endpoint: 'https://nqitpxpjtxmbzfcaqlfu.supabase.co/rest/v1/ihb_fs_captura_leads',
+    apiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5xaXRweHBqdHhtYnpmY2FxbGZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwMjYxMjcsImV4cCI6MjA5MzYwMjEyN30.BR2g_J_j7520aHMCTdkh69CBrmZOd-fdo2tAUmnMw-E'
 };
 
 class LeadCaptureApp {
